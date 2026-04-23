@@ -1,0 +1,31 @@
+name: registry-build
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  registry-build:
+    name: registry-build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history is required: build_registry.py uses `git log` to
+          # derive each pack's added_at and the manifest's generated_at.
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml jsonschema synthpanel
+
+      - name: Validate packs and check default.json freshness
+        run: python scripts/build_registry.py --check

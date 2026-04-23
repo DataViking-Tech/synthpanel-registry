@@ -1,5 +1,62 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-04-22T00:00:00Z",
-  "packs": []
+  "generated_at": "2026-04-23T16:24:30Z",
+  "packs": [
+    {
+      "added_at": "2026-04-23",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "STRESS-TEST PACK — adversarial contrarian personas for sanity-checking synthetic panel consensus. NOT a representative ICP. Use alongside a real ICP pack to expose weak signals: if even the contrarian agrees, the signal is real; if the panel produces uniform agreement, the contrarian forces exposure of weak reasoning.",
+      "id": "contrarian-stress",
+      "kind": "persona",
+      "name": "contrarian-stress",
+      "path": "packs/contrarian-stress/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-23",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Synthetic ICP for SynthPanel itself — UX researchers, PMs, market-research consultants, early-stage founders, AI/ML researchers, and devtool builders who represent the people who actually use SynthPanel.",
+      "id": "icp-synthpanel",
+      "kind": "persona",
+      "name": "icp-synthpanel",
+      "path": "packs/icp-synthpanel/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-23",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Synthetic ICP for Traitprint Cloud — job seekers and recruiters using the hosted candidate/trait matching platform. Covers early-career through senior candidates, plus in-house, agency, and founder-led hiring perspectives.",
+      "id": "icp-traitprint-cloud",
+      "kind": "persona",
+      "name": "Traitprint Cloud ICP",
+      "path": "packs/icp-traitprint-cloud/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-23",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Synthetic ICP for Traitprint Local — developers using the MIT-licensed CLI and MCP server to extract trait profiles from their own documents without sending data to a cloud service.",
+      "id": "icp-traitprint-local",
+      "kind": "persona",
+      "name": "icp-traitprint-local",
+      "path": "packs/icp-traitprint-local/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    }
+  ],
+  "schema_version": 1
 }

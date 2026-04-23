@@ -26,6 +26,24 @@ There is no runtime here — only JSON, a schema, and a PR workflow.
 See [`schema/default.schema.json`](schema/default.schema.json) for the
 authoritative JSON Schema. Validation runs in CI on every PR.
 
+## Adding a pack
+
+1. Drop your pack YAML at `packs/<pack-id>/synthpanel-pack.yaml` (one
+   directory per pack; the directory name must equal the pack's `id:`).
+2. Regenerate the registry index locally:
+   ```
+   pip install pyyaml jsonschema synthpanel
+   python scripts/build_registry.py
+   ```
+   The script walks every `packs/*/synthpanel-pack.yaml`, validates it
+   against synthpanel's persona-pack schema, and rewrites `default.json`
+   deterministically (stable sort, canonical JSON).
+3. Commit both the new pack and the regenerated `default.json` in your PR.
+
+CI runs `python scripts/build_registry.py --check` on every PR. Any pack
+that fails persona-pack validation or any PR whose `default.json` is stale
+relative to its `packs/` tree will fail the `registry-build` status check.
+
 ## Removal
 
 Authors may request takedown via the [pack removal issue
