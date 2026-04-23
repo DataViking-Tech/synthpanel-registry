@@ -11,11 +11,13 @@ There is no runtime here — only JSON, a schema, and a PR workflow.
 
 ## How discovery works
 
-1. A pack author publishes a `synthpanel-pack.yaml` in a public GitHub repo.
-2. They open a submission issue, then a PR adding a `packs/<pack-id>.json`
-   entry to this repo (see [CONTRIBUTING.md](CONTRIBUTING.md)).
-3. A reviewer checks the six criteria in CONTRIBUTING, stamps `added_at`,
-   and merges.
+1. A pack author drops a `synthpanel-pack.yaml` under
+   `packs/<pack-id>/` in this repo (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+2. They open a submission issue, then a PR adding the pack directory and
+   the regenerated `default.json`.
+3. A reviewer checks the submission criteria in CONTRIBUTING and merges.
+   `added_at` is stamped automatically from the pack directory's first
+   commit by `scripts/build_registry.py`.
 4. SynthPanel clients fetch
    `https://raw.githubusercontent.com/DataViking-Tech/synthpanel-registry/main/default.json`
    (cached 24h) to surface the pack via `synthpanel pack search` and to

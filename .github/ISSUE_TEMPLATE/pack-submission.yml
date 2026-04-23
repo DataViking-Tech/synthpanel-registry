@@ -10,11 +10,15 @@ body:
         it confirms author consent and lets reviewers flag obvious problems
         early. See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) for the
         full submission flow and review bar.
+
+        In v1, packs live **in this repo** under
+        `packs/<pack-id>/synthpanel-pack.yaml`. You do not need to host a
+        separate repo.
   - type: input
     id: pack_id
     attributes:
       label: Pack ID
-      description: Unique slug, lowercase, hyphen-separated. Must be unique across `default.json`.
+      description: Unique slug, lowercase, hyphen-separated. Must be unique across `packs/`. The pack directory and the pack YAML's `id:` field must both use this value.
       placeholder: icp-traitprint-cloud
     validations:
       required: true
@@ -32,9 +36,8 @@ body:
     id: name
     attributes:
       label: Human-readable name
+      description: Optional. If omitted, the pack `id` is used as the display name.
       placeholder: Traitprint Cloud ICPs
-    validations:
-      required: true
   - type: textarea
     id: description
     attributes:
@@ -43,33 +46,13 @@ body:
     validations:
       required: true
   - type: input
-    id: repo
-    attributes:
-      label: Source repo (owner/name)
-      description: Must be a public GitHub repo.
-      placeholder: your-handle/your-pack-repo
-    validations:
-      required: true
-  - type: input
-    id: path
-    attributes:
-      label: Path to pack YAML inside the repo
-      description: Relative to repo root. Conventionally `synthpanel-pack.yaml`.
-      placeholder: synthpanel-pack.yaml
-    validations:
-      required: true
-  - type: input
-    id: ref
-    attributes:
-      label: Ref (optional)
-      description: Git tag, branch, or sha to pin. Leave blank to track `main`.
-      placeholder: v0.1.0
-  - type: input
     id: version
     attributes:
-      label: Pack version (optional)
-      description: Mirrors the pack's top-level `version:` field.
-      placeholder: "0.1.0"
+      label: Pack version
+      description: Mirrors the pack's top-level `version:` field. Start at "1" unless you have a reason to pin a semver.
+      placeholder: "1"
+    validations:
+      required: true
   - type: input
     id: author_github
     attributes:
@@ -81,19 +64,21 @@ body:
     id: tags
     attributes:
       label: Tags (optional)
-      description: Comma-separated. Used by `pack search`.
+      description: Comma-separated. Reserved for future `pack search` surfacing.
       placeholder: b2b, saas
   - type: checkboxes
     id: self_review
     attributes:
       label: Author self-review
-      description: All six review criteria apply — the reviewer will re-check these.
+      description: The reviewer will re-check these before merge.
       options:
-        - label: Pack YAML at `repo@ref:path` loads and passes `synthpanel pack import gh:... --unverified`.
+        - label: Pack YAML lives at `packs/<pack-id>/synthpanel-pack.yaml` and the directory name matches the pack `id:` field.
           required: true
-        - label: Pack ID is unique and not already present in `default.json`.
+        - label: Running `python scripts/build_registry.py` locally validates the pack and regenerates `default.json` cleanly.
           required: true
-        - label: Repo and author handle are public.
+        - label: Pack ID is unique and not already present under `packs/`.
+          required: true
+        - label: Author GitHub handle is public.
           required: true
         - label: No obvious prompt-injection payloads in persona text.
           required: true

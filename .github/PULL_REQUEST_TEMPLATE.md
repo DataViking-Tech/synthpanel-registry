@@ -19,13 +19,15 @@ Closes #
 
 ## Review checklist (pack entries)
 
-- [ ] Schema-valid against `schema/default.schema.json`
-- [ ] Pack ID unique across `default.json`
-- [ ] `author.github` is a public handle; `repo` is a public repo
-- [ ] Pack YAML at `repo@ref:path` loads + passes `validate_persona_pack`
+- [ ] Pack YAML lives at `packs/<pack-id>/synthpanel-pack.yaml` (directory name matches pack `id:`)
+- [ ] `default.json` has been regenerated via `python scripts/build_registry.py`
+- [ ] Pack ID unique across `packs/` (build script rejects duplicates)
+- [ ] `author.github` is a public handle
+- [ ] Persona YAML passes `validate_persona_pack` (registry-build CI check)
+- [ ] Schema-valid against `schema/default.schema.json` (validate CI check)
 - [ ] No obvious prompt-injection payloads (reviewer spot-check, not automated)
 - [ ] Calibration score NOT required in v1
 
 ## Pre-merge reviewer action
 
-- [ ] Stamp `added_at` with today's date (`YYYY-MM-DD`) in both `packs/<id>.json` and `default.json`.
+- [ ] `added_at` is stamped automatically by `scripts/build_registry.py` from first-commit date; no manual edit required.
