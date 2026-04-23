@@ -1,0 +1,58 @@
+version: "1"
+id: "icp-traitprint-local"
+description: "Synthetic ICP for Traitprint Local — developers using the MIT-licensed CLI and MCP server to extract trait profiles from their own documents without sending data to a cloud service."
+author: "DataViking-Tech"
+personas:
+  - name: "Alex Chen"
+    age: 32
+    occupation: "Staff backend engineer at a mid-size fintech SaaS"
+    background: "Ten years writing Go and Python for payments infrastructure. Runs Traitprint Local's CLI over his own resume and writing samples to feed a self-hosted job-search agent, because he refuses to paste personal history into a hosted vendor's prompt log. Reads release notes before upgrading and prefers tools whose local-only guarantees are verifiable in the source."
+    personality_traits:
+      - "Pragmatic"
+      - "Distrusts SaaS privacy claims"
+      - "Reads source before docs"
+
+  - name: "Priya Raman"
+    age: 27
+    occupation: "ML engineer at a computer-vision startup"
+    background: "Two years out of a master's in ML, now building retrieval pipelines for a lean team. Wires Traitprint Local into her Claude Code workflow as an MCP server so her coding agent has grounded context about her skills and project history. Tinkers constantly — her dotfiles repo has more stars than most of the tools she uses."
+    personality_traits:
+      - "MCP power user"
+      - "Loves composable tooling"
+      - "Productivity-obsessed"
+
+  - name: "Marcus Okafor"
+    age: 45
+    occupation: "Principal platform engineer and OSS maintainer"
+    background: "Maintains a popular Go-based developer tool and contributes to two others. Evaluating Traitprint Local as a dependency for an open-source career-planning toolkit he is building on weekends. Cares deeply about license compatibility, upstream responsiveness, and whether a project will still exist in three years."
+    personality_traits:
+      - "License-literate"
+      - "Long-term thinker"
+      - "Suspicious of VC-backed OSS"
+
+  - name: "Sofia Hernandez"
+    age: 24
+    occupation: "Junior full-stack developer at a remote-first agency"
+    background: "Eighteen months into her first dev job after a career switch from journalism. Discovered Traitprint Local through a Claude Code tutorial and uses the CLI to prep tailored application materials for senior roles she is stretching toward. Learns by running things locally and breaking them; rarely finishes a tutorial without a terminal open."
+    personality_traits:
+      - "Curious and self-directed"
+      - "Values quick local setup"
+      - "Privacy-aware by habit"
+
+  - name: "Jonas Weber"
+    age: 38
+    occupation: "Security engineer at a European healthcare company"
+    background: "GDPR-conscious by both training and temperament. Chose Traitprint Local over a cloud alternative after reading its threat model and confirming no telemetry is emitted. Uses it strictly offline on an air-gapped laptop to analyse his own employment records for an internal mobility application. Files CVEs for fun."
+    personality_traits:
+      - "Privacy absolutist"
+      - "Threat-models everything"
+      - "Prefers offline workflows"
+
+  - name: "Lena Park"
+    age: 41
+    occupation: "Founder and solo maintainer of a developer-tools microstartup"
+    background: "Runs a one-person SaaS that embeds Traitprint Local as an optional local backend so her customers can enrich their own agent workflows without shipping their resumes to a third party. Values boring, well-documented software; will not adopt a dependency she cannot read in an afternoon."
+    personality_traits:
+      - "Devtool builder"
+      - "Boring-tech advocate"
+      - "Customer-privacy first"
