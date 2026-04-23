@@ -1,0 +1,99 @@
+name: Pack submission
+description: Propose a new pack for the synthpanel registry.
+title: "[submission] <pack-id>"
+labels: ["pack-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a pack. Open this issue **before** you open a PR —
+        it confirms author consent and lets reviewers flag obvious problems
+        early. See [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) for the
+        full submission flow and review bar.
+  - type: input
+    id: pack_id
+    attributes:
+      label: Pack ID
+      description: Unique slug, lowercase, hyphen-separated. Must be unique across `default.json`.
+      placeholder: icp-traitprint-cloud
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Pack kind
+      options:
+        - persona
+        - instrument
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Human-readable name
+      placeholder: Traitprint Cloud ICPs
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences. Will appear in `synthpanel pack search` output.
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Source repo (owner/name)
+      description: Must be a public GitHub repo.
+      placeholder: your-handle/your-pack-repo
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Path to pack YAML inside the repo
+      description: Relative to repo root. Conventionally `synthpanel-pack.yaml`.
+      placeholder: synthpanel-pack.yaml
+    validations:
+      required: true
+  - type: input
+    id: ref
+    attributes:
+      label: Ref (optional)
+      description: Git tag, branch, or sha to pin. Leave blank to track `main`.
+      placeholder: v0.1.0
+  - type: input
+    id: version
+    attributes:
+      label: Pack version (optional)
+      description: Mirrors the pack's top-level `version:` field.
+      placeholder: "0.1.0"
+  - type: input
+    id: author_github
+    attributes:
+      label: Author GitHub handle
+      description: Public GitHub handle of the pack author. This confirms consent.
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (optional)
+      description: Comma-separated. Used by `pack search`.
+      placeholder: b2b, saas
+  - type: checkboxes
+    id: self_review
+    attributes:
+      label: Author self-review
+      description: All six review criteria apply — the reviewer will re-check these.
+      options:
+        - label: Pack YAML at `repo@ref:path` loads and passes `synthpanel pack import gh:... --unverified`.
+          required: true
+        - label: Pack ID is unique and not already present in `default.json`.
+          required: true
+        - label: Repo and author handle are public.
+          required: true
+        - label: No obvious prompt-injection payloads in persona text.
+          required: true
