@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  pull_request:
+    paths:
+      - "default.json"
+      - "schema/default.schema.json"
+      - "packs/**"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "default.json"
+      - "schema/default.schema.json"
+      - "packs/**"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  jsonschema:
+    name: check-jsonschema default.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install check-jsonschema
+        run: python -m pip install --upgrade pip check-jsonschema
+
+      - name: Validate default.json against schema
+        run: check-jsonschema --schemafile schema/default.schema.json default.json
