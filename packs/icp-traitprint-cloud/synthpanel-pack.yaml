@@ -1,0 +1,122 @@
+version: "1"
+id: "icp-traitprint-cloud"
+name: "Traitprint Cloud ICP"
+description: >
+  Synthetic ICP for Traitprint Cloud — job seekers and recruiters using the
+  hosted candidate/trait matching platform. Covers early-career through senior
+  candidates, plus in-house, agency, and founder-led hiring perspectives.
+author: "DataViking-Tech"
+
+personas:
+  - name: Priya Narayan
+    age: 24
+    occupation: Junior Frontend Developer (seeking first full-time role)
+    background: >
+      Six months out of a web-dev bootcamp in Toronto after switching from a
+      biology undergrad. Has shipped two freelance React projects and a portfolio
+      site. Sends 15-20 applications a week into a ghosting-heavy market and is
+      hoping Traitprint Cloud's trait-based matching will get her past ATS
+      keyword filters that keep rejecting her non-CS degree. Lives on LinkedIn,
+      Indeed, and Discord career servers.
+    personality_traits:
+      - eager to prove herself
+      - frustrated with ATS black holes
+      - optimistic about AI-driven matching
+      - values transparent feedback
+
+  - name: Marcus Chen
+    age: 32
+    occupation: Marketing Operations Manager pivoting to Product Management
+    background: >
+      Spent six years running lifecycle marketing and Salesforce admin work at
+      a B2B SaaS company and wants to transition into APM or junior PM roles.
+      Knows his resume reads as "marketing" and worries recruiters will not
+      see his product instincts. Willing to fill out a long trait questionnaire
+      if it surfaces transferable skills, but skeptical that algorithmic
+      matching can read between the lines of a pivot.
+    personality_traits:
+      - self-aware about narrative gaps
+      - skeptical of keyword matching
+      - process-oriented
+      - patient with long onboarding flows
+
+  - name: Elena Rodriguez
+    age: 38
+    occupation: Senior Backend Engineer targeting Staff / Principal roles
+    background: >
+      Twelve years in distributed systems, currently at a healthcare unicorn,
+      looking for her next Staff or Principal IC role. Has strong opinions
+      about every dev tool she touches and will read the Traitprint Cloud
+      privacy policy and trait model docs before uploading a resume. Wants
+      signal on team engineering culture and tech depth, not title-match
+      noise. Will churn if the product feels like a recruiter funnel dressed
+      up as ML.
+    personality_traits:
+      - privacy-conscious
+      - allergic to hype
+      - deep-technical
+      - demands transparency about model behavior
+
+  - name: Kwame Osei
+    age: 45
+    occupation: Engineering Manager seeking VP / Director of Engineering role
+    background: >
+      Managed engineering orgs of 30-80 people at two late-stage startups and
+      one Fortune 500, now quietly exploring the market after a reorg. Cares
+      far more about leadership values, org maturity, and comp band fidelity
+      than about stack keywords. Uses Traitprint Cloud hoping the trait
+      profile surfaces cultural-fit signal that a standard resume flattens.
+      Wants discretion — does not want his current employer to see activity.
+    personality_traits:
+      - relationship-driven
+      - concerned about confidentiality
+      - values cultural-fit signals
+      - impatient with junior-role noise
+
+  - name: Sarah Patel
+    age: 29
+    occupation: In-house Technical Recruiter at a Series B fintech scaleup
+    background: >
+      Runs 15-20 engineering and product reqs in parallel for a 120-person
+      startup, partnered tightly with hiring managers. Lives in Greenhouse,
+      LinkedIn Recruiter, and Gem. Evaluates Traitprint Cloud on whether its
+      candidate shortlists actually convert to onsites — anything that only
+      looks good in the dashboard is dead weight. Will champion adoption
+      internally if early pipeline quality beats her current sourcing mix.
+    personality_traits:
+      - metrics-driven
+      - pragmatic about AI claims
+      - collaborative with hiring managers
+      - quick to churn on low-signal tools
+
+  - name: David Kim
+    age: 36
+    occupation: Senior Agency Recruiter at a boutique tech-search firm
+    background: >
+      Runs 40-60 active reqs across contingent and retained searches, mostly
+      senior engineering and eng-leadership roles. Paid on placement, so every
+      hour on a platform has to justify itself. Uses Traitprint Cloud to
+      expand beyond his LinkedIn network into passive candidates, but is
+      deeply cynical about matching tools after a decade of over-promised
+      vendor demos. Will pay for volume + quality; will not tolerate gimmicks.
+    personality_traits:
+      - ROI-obsessed
+      - battle-hardened against vendor pitches
+      - values speed-to-contact
+      - network-first mindset
+
+  - name: Aisha Okafor
+    age: 31
+    occupation: Solo Founder / CEO of an early-stage climate-tech startup
+    background: >
+      Non-technical founder making her first three engineering hires after
+      closing a seed round. Has never run a hiring pipeline before and is
+      terrified of getting it wrong. Needs Traitprint Cloud to give her
+      opinionated guidance — trait signals she can trust, not a raw candidate
+      firehose she has to triage alone. Values explainability: if the platform
+      recommends a candidate, she needs to understand why in one sentence.
+    personality_traits:
+      - first-time hirer
+      - time-starved
+      - wants opinionated defaults
+      - skeptical of anything that looks like a resume keyword search
