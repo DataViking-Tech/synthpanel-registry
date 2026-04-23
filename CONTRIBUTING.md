@@ -3,42 +3,65 @@
 Thanks for proposing a pack for the SynthPanel registry. This repo is a thin,
 curated index — every entry is human-reviewed against the same bar.
 
+## How packs are hosted
+
+Packs live **in this repo** under `packs/<pack-id>/synthpanel-pack.yaml`, one
+directory per pack. The directory name must match the pack's top-level `id:`
+field. The root `default.json` is a generated manifest built from those
+directories by `scripts/build_registry.py`.
+
+(External-repo hosting may return in a later release; v1 keeps everything in
+one curated tree so the review bar is uniform and auditable.)
+
 ## Before you submit
 
-1. **Publish your pack in a public GitHub repo.** The pack file should be
-   named `synthpanel-pack.yaml` at the repo root. A git tag (e.g. `v0.1.0`)
-   is recommended so the registry entry can pin a `ref`.
-2. **Validate locally.** Run `synthpanel pack import gh:owner/repo --unverified`
-   and confirm the pack loads and passes `validate_persona_pack`.
+1. **Write your pack YAML.** Put it at `packs/<pack-id>/synthpanel-pack.yaml`.
+   See the seed packs in `packs/` for examples. Required top-level fields:
+   `id`, `version`, `description`, `author`, `personas`.
+2. **Validate locally** by regenerating the manifest:
+   ```
+   pip install pyyaml jsonschema synthpanel
+   python scripts/build_registry.py
+   ```
+   The script validates every pack against synthpanel's `validate_persona_pack`
+   and rewrites `default.json` deterministically.
 3. **Open a pack submission issue** using the
    [pack-submission template](.github/ISSUE_TEMPLATE/pack-submission.yml).
    This confirms author consent before a PR lands.
 
-## Submitting an entry
+## Submitting the PR
 
 Once the submission issue is accepted, open a PR that:
 
-1. Adds `packs/<pack-id>.json` with the entry fields described in
-   [`schema/default.schema.json`](schema/default.schema.json).
-2. Appends the same entry to the `packs` array in `default.json`.
-   (A `packs/*.json` → `default.json` build step will automate this in a
-   later release; until then both files are edited by hand.)
+1. Adds `packs/<pack-id>/synthpanel-pack.yaml`.
+2. Commits the regenerated `default.json` (produced by running
+   `python scripts/build_registry.py`).
 
-The PR template checklist mirrors the six review criteria below — fill it in
-so reviewers can verify at a glance.
+CI runs `python scripts/build_registry.py --check` on every PR. The PR fails
+if any pack is invalid or if `default.json` is stale relative to the
+`packs/` tree.
+
+The PR template checklist mirrors the review criteria below — fill it in so
+reviewers can verify at a glance.
 
 ## Review criteria
 
-Every submission must meet all six of these before merge:
+Every submission must meet all of these before merge:
 
-- Schema-valid against `schema/default.schema.json`
-- Pack ID unique across `default.json`
-- `author.github` is a public handle; `repo` is a public repo
-- Pack YAML at `repo@ref:path` loads + passes `validate_persona_pack`
-- No obvious prompt-injection payloads (reviewer spot-check, not automated)
-- Calibration score NOT required in v1
+- **Schema-valid** against `schema/default.schema.json` (enforced by the
+  `validate` workflow).
+- **Passes `validate_persona_pack`** on the pack's `personas:` list (enforced
+  by the `registry-build` workflow via `scripts/build_registry.py --check`).
+- **Pack ID unique** across `packs/` (directory names are the source of truth;
+  the build script rejects duplicates).
+- **`author.github` is a public GitHub handle.**
+- **No obvious prompt-injection payloads** in persona text (reviewer
+  spot-check, not automated).
+- **Calibration score NOT required in v1** — the `calibration` field is
+  always emitted as `null`.
 
-On merge, the reviewer stamps `added_at` (today's date, `YYYY-MM-DD`).
+`added_at` is stamped automatically by the build script from the pack
+directory's first commit date; reviewers do not edit it manually.
 
 ## Removal and deprecation
 
@@ -53,4 +76,5 @@ invalidate users' local caches.
   later but the review bar does not cover instrument-specific checks yet.
 - Calibration fingerprints are reserved (`calibration: null`); do not
   populate that field.
-- No sha256 checksum pinning in v1 — we trust git `@ref` tags.
+- No sha256 checksum pinning in v1 — pack content is committed directly to
+  this repo and reviewed in-band.
