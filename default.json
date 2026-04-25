@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:06:54Z",
+  "generated_at": "2026-04-25T05:08:34Z",
   "packs": [
     {
       "added_at": "2026-04-24",
@@ -26,6 +26,20 @@
       "kind": "persona",
       "name": "contrarian-stress",
       "path": "packs/contrarian-stress/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-25",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Creator-economy participants: full-time creators across YouTube/podcast/ newsletter/livestream/adult, the founders building tools for them, and the agencies/services that serve them. Designed for creator-tool research, monetization-platform surveys, and creator-economy market sizing.",
+      "id": "creator-economy-builder",
+      "kind": "persona",
+      "name": "Creator Economy Builder",
+      "path": "packs/creator-economy-builder/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
