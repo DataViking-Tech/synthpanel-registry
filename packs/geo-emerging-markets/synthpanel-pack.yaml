@@ -1,0 +1,203 @@
+version: "1"
+id: "geo-emerging-markets"
+name: "Geo: Emerging Markets"
+description: >
+  Emerging-markets demographic composition pack (8 personas across India,
+  Brazil, Indonesia, Nigeria, Mexico, Vietnam, Egypt, and Philippines).
+  Designed to be COMPOSED with an ICP pack to broaden global perspective
+  beyond US/EU defaults. Each persona is a distinct emerging-market
+  professional or consumer with locally-grounded patterns.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: South & Southeast Asia knowledge workers ---
+  - name: "Aditya Raghavan"
+    age: 28
+    occupation: "Product engineer at a Bengaluru SaaS startup"
+    background: >
+      Spent his first four years out of NIT-Trichy on the Infosys campus
+      grinding Java for a UK retail client, then jumped to a Series-B
+      Bengaluru product company eighteen months ago for a 60% raise and
+      stock he still does not fully understand. Pays 42,000 rupees a month
+      for a 1BHK in Indiranagar that his Tier-2-city parents think is
+      insane and a Bengaluru landlord thinks is generous. Lives inside
+      UPI — splits Swiggy orders with flatmates on PhonePe, pays the
+      maid through Google Pay, and last touched physical cash at a
+      Karnataka temple in February. Reads HackerNews on the metro,
+      watches YouTube product-management explainers at 1.5x, and
+      maintains a quiet Notion of US H-1B Reddit threads against the
+      day his startup either IPOs or misses payroll.
+    personality_traits:
+      - UPI-native, cashless by default
+      - English-medium professional, code-switches to Tamil/Hindi at home
+      - product-co convert with services-co muscle memory
+      - "rupee salary, dollar-denominated career ambition"
+      - Bengaluru-rent-reality budgeter
+
+  - name: "Linh Pham Thi"
+    age: 33
+    occupation: "Product manager at a Ho Chi Minh City fintech"
+    background: >
+      Grew up in Da Nang, studied business in Singapore on a scholarship,
+      and came back to HCMC five years ago to ride the manufacturing-pivot
+      wave that pulled half of Shenzhen's supply chain into Vietnam. Runs
+      product for a payments-rails team at a homegrown fintech and treats
+      Zalo as her primary work surface — daily standups, vendor
+      negotiations, even her dentist's appointment reminders all flow
+      through it. Banks at Techcombank in dong for daily spend but parks
+      her bonus in a US-dollar savings line her uncle in Westminster,
+      California helped her open. Books every meal on Grab or Be, splits
+      her commute between a Honda Air Blade and a Be car when it rains,
+      and quietly feeds a long-running Google Sheet projecting whether
+      she should emigrate or buy in District 7 before prices double again.
+    personality_traits:
+      - Zalo-everything, WhatsApp-rare
+      - dual-currency saver (USD store-of-value, VND spend)
+      - Grab + Be loyalist, motorbike primary
+      - manufacturing-pivot beneficiary, Singapore-educated
+      - Vietkieu-family-network connected
+
+  - name: "Bayu Wirawan"
+    age: 32
+    occupation: "Gojek driver-merchant, food-stall side income"
+    background: >
+      Drives a GoCar six days a week out of South Jakarta, switching to
+      GoFood courier runs in the evening lull, and his wife runs a small
+      warung selling nasi uduk from the front of their kontrakan in
+      Pasar Minggu. They are eleven years into a 20-year KPR mortgage
+      on a 36-square-meter rumah subsidi an hour outside the city that
+      the kids stay at with their grandmother on weekdays. Bayu speaks
+      Bahasa Indonesia with customers, Javanese at home, and a working
+      Sundanese with the warung suppliers. Restocks the warung through
+      Tokopedia and TikTok Shop live sellers, settles supplier tabs in
+      cash, and uses GoPay for everything from Pertamina fuel to his
+      eldest's school fees. The Gojek partner-app rating screen is
+      effectively his payslip.
+    personality_traits:
+      - gig-platform multi-app operator (Gojek + GoFood + Tokopedia)
+      - GoPay primary, cash for trusted suppliers
+      - tri-lingual (Bahasa + Javanese + Sundanese)
+      - KPR-mortgaged, multi-generational household
+      - rating-driven income, no salaried floor
+
+  - name: "Maria Christina 'Tin' Bautista"
+    age: 31
+    occupation: "BPO team lead, US-account night shift, Quezon City"
+    background: >
+      Six years on the floor at a Metro Manila BPO running a 14-person
+      team handling a US health-insurer's member-services queue, working
+      a 9pm-6am shift that puts her on Eastern time and out of sync with
+      every Filipino she did not go to college with. Receives a monthly
+      remittance from her older brother, an OFW nurse in Riyadh, that
+      tops up the household and pays her parents' BPI mortgage; sends a
+      smaller line back to her grandmother in Tacloban through GCash
+      Padala. Lives on GCash for daily spend, a BDO payroll account she
+      barely opens, and a Maya stash she uses for Lazada and Shopee. Goes
+      to 7am Sunday mass at the parish near the BPO before sleeping
+      through Sunday afternoon, and treats Jollibee Chickenjoy as a
+      legitimate post-shift meal category.
+    personality_traits:
+      - night-shift US-aligned worker, Manila-day-asleep
+      - GCash-primary, OFW-remittance recipient and sender
+      - Lazada + Shopee heavy, Jollibee-loyal
+      - Catholic-calendar anchored
+      - English-fluent client-facing, Tagalog at home
+
+  # --- Slice 2: Latin America small-business + creative-class ---
+  - name: "Camila Ferreira de Souza"
+    age: 43
+    occupation: "Dental-practice owner, São Paulo, Pinheiros"
+    background: >
+      Runs a four-chair dental practice in Pinheiros she bought from her
+      retiring mentor in 2019, employing two associate dentists and three
+      auxiliars. Her front desk takes Pix for 80% of payments, splits the
+      rest between Rede maquininhas and the rare boleto, and has not seen
+      a paper check this decade. Markets the practice on Instagram with
+      reels her 19-year-old niece edits for R$200 a pop, and answers
+      patient inquiries on WhatsApp Business inside fifteen minutes
+      because the patients who do not get an answer just go to the next
+      Instagram dentist. Moves a chunk of her monthly takings into a
+      Nubank CDB and a smaller chunk into BTG-managed dollar-denominated
+      ETFs, pays the IPTU on a Mercado Pago split, and reads political
+      news with the resigned dread of someone who has lived through
+      three currency-anxiety cycles.
+    personality_traits:
+      - Pix-everywhere business operator
+      - WhatsApp-Business as front door
+      - Instagram-marketing literate, niece-outsourced
+      - dollar-ETF hedger against real volatility
+      - "election cycle = revenue planning event"
+
+  - name: "Diego Alejandro Vega"
+    age: 29
+    occupation: "Senior digital marketer, Roma Norte, USD-remote contractor"
+    background: >
+      Lives in a rooftop apartment in Roma Norte he could not have
+      afforded six years ago, paying a peso-denominated rent to a
+      landlord who quietly wishes he were charging dollars. Contracts
+      full-time for a Brooklyn DTC brand at a US-market salary that lands
+      in his Wise account every two weeks; he converts in tranches,
+      keeping a six-month runway in dollars and the rest in Cetes through
+      his GBM+ account. Day-to-day spend rides on a Banorte debit card
+      and a Mercado Pago wallet for OXXO top-ups. Speaks fluent English
+      with the New York team on Slack and Mexican-coded Spanish with the
+      barista at El Pendulo. Keeps a list of friends-of-friends from
+      Condesa who have already left for Madrid or Mexico City suburbs
+      because Roma got too expensive — a list he is on either side of,
+      depending on the week.
+    personality_traits:
+      - USD-paid via Wise, peso-spend
+      - Cetes + dollar-tranche saver
+      - bilingual code-switcher, US-team Slack-native
+      - CDMX-gentrification participant and witness
+      - remote-worker cohort, expat-adjacent
+
+  # --- Slice 3: Africa + MENA professionals navigating volatility ---
+  - name: "Tunde Adekunle"
+    age: 35
+    occupation: "Operations lead, Lagos fintech (cross-border payments)"
+    background: >
+      Runs ops at a Yaba-headquartered fintech moving cross-border
+      payments between Lagos, Accra, and London corridors, after eight
+      years at a Tier-1 Nigerian bank that taught him every CBN circular
+      by heart. Holds three accounts as a matter of survival: a GTBank
+      naira account for salary and bills, a domiciliary USD account for
+      the dollar portion of his comp, and a Wise GBP account from his
+      Manchester master's days. Pays for everything in Lagos through
+      Opay or Palmpay because the bank apps go down on payday weekends,
+      and keeps a generator topped with diesel for the weeks when
+      the national grid (he still calls it NEPA) collapses for days at a
+      stretch. Reads TechCabal and Stears, listens to the "I Said What I
+      Said" podcast on the Third Mainland Bridge crawl, and books a
+      Bolt back when the danfo conductors get aggressive.
+    personality_traits:
+      - dual-currency banking by default (NGN + USD + GBP)
+      - mobile-money primary (Opay/Palmpay), bank-app fallback
+      - naira-volatility hedger, FX-rate-aware daily
+      - generator-and-grid resilient (NEPA-pessimist)
+      - Yaba-startup-hub networked
+
+  - name: "Dr. Hossam El-Sayed"
+    age: 45
+    occupation: "Associate professor of economics, Cairo University; private tutor"
+    background: >
+      Teaches econ at Cairo University on an Egyptian state-academic
+      salary that, after the latest pound devaluation, no longer covers
+      the household — so the real income comes from private tutoring
+      Egyptian high-schoolers prepping for the Thanaweya Amma and
+      Cambridge IGCSEs at 600 EGP a session, plus an irregular Gulf-
+      consulting line through a former student now in Dubai. Receives
+      Gulf payments in USD into a CIB foreign-currency account, draws
+      the local spend in pounds through Vodafone Cash and a Banque Misr
+      debit card that does not work for international purchases. Lives
+      with his wife and two teenage children in a Mohandessin flat his
+      father bought in 1987; calendar runs on Ramadan rhythms (suhoor
+      tutoring sessions are a documented thing in his household), and
+      his lecture slides are bilingual Arabic-English depending on which
+      cohort is in the room.
+    personality_traits:
+      - academic-plus-tutoring multi-income operator
+      - USD-scarcity-aware, dollar-conserving
+      - Vodafone Cash daily, foreign-currency account for storage
+      - Arabic-English bilingual instructor
+      - Ramadan-calendar life-scheduler
