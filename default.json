@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T04:39:06Z",
+  "generated_at": "2026-04-25T04:41:31Z",
   "packs": [
     {
       "added_at": "2026-04-24",
@@ -40,6 +40,20 @@
       "kind": "persona",
       "name": "fintech-pm",
       "path": "packs/fintech-pm/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-24",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Healthcare clinicians and digital-health buyers across primary care, hospital systems, specialty practices, telehealth, and clinical informatics. Designed for healthcare product research, EHR/clinical-tool surveys, and digital-health buying studies in HIPAA/regulated environments.",
+      "id": "healthcare-clinician",
+      "kind": "persona",
+      "name": "Healthcare Clinician",
+      "path": "packs/healthcare-clinician/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
