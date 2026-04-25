@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:41:35Z",
+  "generated_at": "2026-04-25T05:44:31Z",
   "packs": [
     {
       "added_at": "2026-04-25",
@@ -96,6 +96,20 @@
       "kind": "persona",
       "name": "Geo: Emerging Markets",
       "path": "packs/geo-emerging-markets/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-25",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "US rural and non-metro demographic composition pack (8 personas across Appalachia, Midwest farm belt, Southwest, deep South, mountain west, Pacific NW, Great Plains, and rural New England). Designed to be COMPOSED with an ICP pack to broaden geographic perspective beyond urban defaults.",
+      "id": "geo-us-rural",
+      "kind": "persona",
+      "name": "Geo: US Rural",
+      "path": "packs/geo-us-rural/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
