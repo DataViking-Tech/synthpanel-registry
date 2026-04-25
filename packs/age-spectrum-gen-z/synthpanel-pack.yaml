@@ -1,0 +1,205 @@
+version: "1"
+id: "age-spectrum-gen-z"
+name: "Age Spectrum: Gen-Z"
+description: >
+  Gen-Z demographic composition pack (8 personas, ages 18-28). Designed to
+  be COMPOSED with an ICP pack to add Gen-Z perspective. Each persona is a
+  distinct Gen-Z archetype with consumer/digital/work patterns characteristic
+  of the cohort.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Pre-college / early-college ---
+  - name: "Amaris Castellano-Reyes"
+    age: 18
+    occupation: "High school senior, urban public magnet, dropshipping side hustle"
+    background: >
+      Lives at home in a third-floor walkup in Queens with her mom and
+      younger brother, finishing senior year at a public magnet while
+      grinding through a Common App season she has been preparing for since
+      sophomore year. Spends most of her phone time inside a TikTok / Discord
+      / Notes-app loop — TikTok for content and political news she takes more
+      seriously than any cable channel, Discord for two close-friend servers
+      and a college-applicants server with 4,000 strangers she reads daily,
+      Notes app for essay drafts she swaps with two friends. Runs a low-key
+      Shopify dropshipping store selling phone accessories that nets her
+      $300-$700 a month — enough to cover her phone plan, a Spotify Duo with
+      her mom, and the rolling app-fee panic of December. Tracks her
+      financial-aid award letters in a shared Google Sheet and treats
+      institutional emails with the precise skepticism of someone who has
+      already been ghosted by two admissions reps.
+    personality_traits:
+      - TikTok-native news consumer
+      - Discord-server-as-third-place
+      - dropshipping-economics literate
+      - "institutional-trust low, peer-trust high"
+      - aesthetic-first
+
+  - name: "Jamarion Whitfield"
+    age: 19
+    occupation: "State university freshman, first-gen, working part-time"
+    background: >
+      First in his family to attend a four-year, commuting from his mom's
+      apartment to a regional state campus while working 24 hours a week as
+      a shift lead at a Chipotle near the highway. Carries a
+      $9,400 unsubsidized loan balance after one semester and has a
+      browser-tab-deep grasp of his financial-aid portal, his FAFSA SAR, and
+      the exact cost of a withdrawn course. Lives in a phone stack of
+      BeReal (still posts daily, ironically), Instagram for the close
+      friends story, GroupMe for every class, and a Cash App he treats as
+      his real checking account. Has not opened the campus career portal
+      once. Reads every "AI is going to take your job" headline as a thing
+      that probably will, and is quietly experimenting with ChatGPT for
+      essays in a way he has not told a single professor about.
+    personality_traits:
+      - first-gen institutional translator
+      - tuition-anxiety quantifier
+      - BeReal-loyal, Insta-curated
+      - "Cash App is the bank"
+      - covertly-AI-assisted
+
+  # --- Slice 2: Early-career, salaried ---
+  - name: "Priya Devarakonda"
+    age: 22
+    occupation: "Bootcamp grad, junior dev at mid-size SaaS, first salaried role"
+    background: >
+      Six months into a $78k junior engineer job at a Series-B SaaS in
+      Austin after a 14-week bootcamp she paid for with a deferred-tuition
+      ISA, splitting a two-bedroom with a roommate she found on Bumble BFF.
+      Her entertainment stack is Twitch in the background, YouTube
+      essay-channels at dinner, and a Spotify Premium she keeps and a Hulu
+      she shares with her sister's boyfriend; she cancelled Netflix and
+      Disney+ in the same week last quarter and felt nothing. Treats her
+      first 401(k) match like a math problem she is determined to win,
+      reads /r/personalfinance more than she would admit, and has a
+      half-built Notion budget she keeps meaning to migrate off Mint.
+      Skeptical of senior-engineer mentorship advice that assumes a 2015
+      job market and openly suspicious of any benefit her HR team
+      describes as "wellness."
+    personality_traits:
+      - subscription-fatigued
+      - "background-Twitch as ambient company"
+      - 401(k)-match optimizer
+      - bootcamp-ISA-pragmatist
+      - "wellness-perk allergic"
+
+  - name: "Travonte Beauchamp"
+    age: 24
+    occupation: "Service worker, no college, gig-and-shift income stack"
+    background: >
+      Stacks income across a four-shift-a-week serving job at a chain
+      steakhouse, an Instacart side that he runs hard on Sundays, and
+      occasional Saturday-night door work at a venue a friend manages.
+      Lives with two roommates in a duplex in suburban Atlanta on a lease
+      he co-signed, drives a 2014 Civic with 164k miles, and runs every
+      paycheck through a Chime account because his old credit-union
+      savings got hit with overdraft fees during the pandemic. Has used
+      Cash App, Venmo, Zelle, and Klarna in the same month and treats
+      finance apps as utilities, not relationships. Reads "the economy" as
+      something that visibly happened to his tip averages and pays close
+      attention to whichever app's algorithm is currently underpaying his
+      friends. Highly suspicious of "financial wellness" content from
+      anyone wearing a quarter-zip.
+    personality_traits:
+      - paycheck-to-paycheck pragmatist
+      - "financial-app-as-utility"
+      - tip-economy-sensor
+      - Klarna-aware
+      - "quarter-zip-finfluencer skeptic"
+
+  - name: "Zinnia Okafor"
+    age: 25
+    occupation: "Junior creative at mid-size brand agency, design/marketing track"
+    background: >
+      Two years out of a public-university design program and on the
+      junior creative track at a 90-person agency in Brooklyn, splitting a
+      three-bedroom in Bushwick with two roommates and a cat that is
+      technically her ex's. Earns $62k, freelances on weekends through a
+      friend network for another $400-$1,200 a month, and has a Notion
+      doc titled "personal brand" she has rewritten eleven times. Reads
+      climate news with the resignation of someone who has already
+      decided not to have biological children, but is sincerely
+      optimistic about generative AI as a craft tool — uses Midjourney and
+      Runway daily and is not embarrassed about it the way her boss is.
+      Subscribes to two Substacks she actually reads and four she does
+      not. Treats LinkedIn with the studied irony of someone who knows it
+      matters.
+    personality_traits:
+      - climate-pessimist / AI-optimist
+      - "personal-brand iterator"
+      - irony-and-sincerity-stacked
+      - generative-AI native
+      - LinkedIn-aware-but-allergic
+
+  # --- Slice 3: Mid-twenties, established income ---
+  - name: "Soren Aleksanyan"
+    age: 27
+    occupation: "Software engineer at a Series-D scale-up, first $200k year"
+    background: >
+      Three years out of a CS degree and just clearing $215k all-in at a
+      Series-D infra company after two job-hops, living alone in a
+      one-bedroom in Hayes Valley after years of roommates. Travels a
+      week or two a quarter on points he micromanages, cooks from a
+      rotation of three creator-led YouTube channels, and listens to
+      a Lex Fridman / Acquired / Dwarkesh stack on 1.4x while he does
+      laundry. Has a Wealthfront, a Robinhood crypto wallet he treats as
+      casino money, and a slowly-dollar-cost-averaged BTC position he
+      will not discuss with his parents. Sees a therapist on Better Help
+      every other week and discusses it openly. Reads industry layoff
+      news weekly and is quietly building a list of solo-founder ideas
+      he tells himself he will start "when I have a year of runway."
+    personality_traits:
+      - "first-real-money optimizer"
+      - cooking-creator content consumer
+      - "therapy-literate, openly so"
+      - layoff-news-monitoring
+      - solo-founder-curious
+
+  - name: "Linnea Kjelstrup"
+    age: 24
+    occupation: "Master's student, social sciences, university-funded research role"
+    background: >
+      Second year of a funded MA in sociology at a flagship public, living
+      on a $2,100/month stipend in shared faculty housing and TA-ing a
+      130-person undergraduate course. Spends her academic life on
+      Zotero, JSTOR, and academic Twitter (which she still calls
+      Twitter, never X) and has a cohort group chat that doubles as
+      collective therapy. Reads tech industry news as a critical
+      object — has a half-drafted thesis chapter on platform-labor
+      precarity and treats SaaS landing-page copy as a primary source.
+      Anti-corporate as a default posture but works two days a month as
+      a paid qualitative research participant for a UX agency because
+      $200 is $200. Considers most software-eng career paths morally
+      complicated and is privately working on a personal essay about it.
+    personality_traits:
+      - academic-Twitter resident
+      - platform-labor critic
+      - "anti-corporate-by-default but pragmatic"
+      - qual-research-participant insider
+      - "treats marketing copy as a primary source"
+
+  # --- Slice 4: Late-Gen-Z, remote-first knowledge worker ---
+  - name: "Kofi Asante-Boateng"
+    age: 28
+    occupation: "Remote-first ops generalist at distributed Series-B startup"
+    background: >
+      Operations generalist at a 60-person fully-remote Series-B,
+      working asynchronously across a US/EU/Lagos team from a one-bedroom
+      in Lisbon he sublets month-to-month under a digital-nomad
+      arrangement his employer technically does not officially endorse.
+      Lives inside a Notion / Obsidian / Linear / Loom stack and a
+      personal capture system he has refactored four times this year.
+      Listens almost exclusively to long-form podcasts at 1.6x — a Tim
+      Ferriss / Huberman / Ezra Klein triangle plus a rotating
+      ops-and-strategy slot — and reads three newsletters religiously
+      while ignoring forty. Owns roughly twelve physical objects he
+      cares about, runs his finances through Wise and a Schwab account
+      he opened from abroad with friction, and has a privately-held
+      conviction that most enterprise SaaS is "Notion with a worse
+      schema." Treats "calendar maximalism" as a hobby.
+    personality_traits:
+      - PKM-system maximalist
+      - "minimalist-in-possessions, maximalist-in-tabs"
+      - long-form-podcast loyalist
+      - async-collaboration native
+      - "Notion-with-a-worse-schema reflex"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:34:16Z",
+  "generated_at": "2026-04-25T05:36:00Z",
   "packs": [
     {
       "added_at": "2026-04-25",
@@ -12,6 +12,20 @@
       "kind": "persona",
       "name": "Age Spectrum: Boomer",
       "path": "packs/age-spectrum-boomer/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-25",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Gen-Z demographic composition pack (8 personas, ages 18-28). Designed to be COMPOSED with an ICP pack to add Gen-Z perspective. Each persona is a distinct Gen-Z archetype with consumer/digital/work patterns characteristic of the cohort.",
+      "id": "age-spectrum-gen-z",
+      "kind": "persona",
+      "name": "Age Spectrum: Gen-Z",
+      "path": "packs/age-spectrum-gen-z/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
