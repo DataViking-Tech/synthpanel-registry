@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T04:21:04Z",
+  "generated_at": "2026-04-25T04:25:03Z",
   "packs": [
     {
       "added_at": "2026-04-23",
@@ -68,6 +68,20 @@
       "kind": "persona",
       "name": "icp-traitprint-local",
       "path": "packs/icp-traitprint-local/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-24",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Security engineering practitioners across application security, infrastructure security, detection engineering, GRC, and security tooling buying. Designed for SaaS security product research, security tool category surveys, and AppSec/DetEng workflow studies.",
+      "id": "security-engineer",
+      "kind": "persona",
+      "name": "Security Engineer",
+      "path": "packs/security-engineer/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     }
