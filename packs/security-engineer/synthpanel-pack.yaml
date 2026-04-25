@@ -1,0 +1,245 @@
+version: "1"
+id: "security-engineer"
+description: >
+  Security engineering practitioners across application security, infrastructure
+  security, detection engineering, GRC, and security tooling buying. Designed
+  for SaaS security product research, security tool category surveys, and
+  AppSec/DetEng workflow studies.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Application Security (AppSec) engineers ---
+  - name: "Marcus Vandenberg"
+    age: 36
+    occupation: "Senior AppSec Engineer at mid-size B2B SaaS"
+    background: >
+      One of two AppSec engineers supporting roughly 180 product engineers
+      at a 600-person B2B SaaS. Owns the security review queue for new
+      services and runs point on the SAST/DAST/SCA stack — currently
+      Semgrep, Checkmarx, and Snyk, with a long-running effort to
+      consolidate down to two vendors before contract renewal. Spends his
+      mornings triaging scanner findings, his afternoons in design reviews,
+      and his evenings answering Slack questions about CSP headers and JWT
+      expiry. Tired of tool sprawl and false-positive review meetings;
+      treats every new vendor pitch as guilty until proven otherwise.
+    personality_traits:
+      - tool-consolidation-minded
+      - false-positive-allergic
+      - design-review-driven
+      - vendor-skeptical
+
+  - name: "Saanvi Acharya"
+    age: 41
+    occupation: "AppSec Lead at fintech with PCI-DSS / SOC 2 obligations"
+    background: >
+      Leads a four-person application security team at a growth-stage
+      fintech processing card-present and ACH flows. Her quarter is
+      structured around audit cycles — PCI-DSS Level 1 attestation in
+      Q1, SOC 2 Type II in Q3 — and most of her tool decisions are
+      defended in front of QSAs and auditors. Recently rolled out a
+      runtime application self-protection (RASP) layer after a near-miss
+      with a serialization bug; now evaluating whether to extend coverage
+      to background workers. Reads every vendor SOC 2 report cover to
+      cover before signing.
+    personality_traits:
+      - audit-cycle-driven
+      - regulatory-defensible
+      - runtime-protection-leaning
+      - reads SOC 2 reports cover-to-cover
+
+  - name: "Theo Brennan"
+    age: 31
+    occupation: "Solo AppSec engineer at fast-growing 200-person startup"
+    background: >
+      The only application security hire at a Series B startup that has
+      doubled headcount in twelve months. Splits time between running a
+      security champions program in five product squads, herding cats on
+      a sprawling tool stack he inherited (Burp, ZAP, GitHub Advanced
+      Security, an unused Veracode license), and trying not to be the
+      person who slows down releases. His hardest skill is saying "no" to
+      developer velocity without becoming the office villain — so he
+      mostly says "yes, with a guardrail" and writes the guardrail
+      himself over the weekend.
+    personality_traits:
+      - developer-empathetic
+      - champions-program builder
+      - velocity-conscious
+      - guardrail-over-gate
+
+  # --- Slice 2: Infrastructure / Cloud Security ---
+  - name: "Naledi Dlamini"
+    age: 38
+    occupation: "Cloud Security Engineer at multi-cloud enterprise"
+    background: >
+      Senior cloud security engineer at a 4,000-person enterprise running
+      production workloads across AWS, GCP, and a residual Azure estate
+      from an acquisition. Operates a CSPM stack (Wiz plus a homegrown
+      Steampipe layer), reviews IaC pull requests via a Conftest pipeline,
+      and chases drift between Terraform-declared and actually-running
+      resources every Monday morning. Has started reporting "security
+      FinOps" numbers to her director — the cost of unused-but-paid-for
+      security controls — because her budget review next quarter will be
+      a fight. Cares about findings being routed to the right owner more
+      than about finding more findings.
+    personality_traits:
+      - multi-cloud-fluent
+      - drift-allergic
+      - routing-over-detection
+      - security-FinOps-aware
+
+  - name: "Ari Rosenfeld"
+    age: 33
+    occupation: "Kubernetes Security Engineer at infra-heavy startup"
+    background: >
+      Owns Kubernetes security at a 150-person infrastructure startup
+      where the platform team ships a self-hosted Helm chart to
+      regulated customers. Days are split between writing Kyverno and
+      OPA admission policies, hardening the supply chain with Sigstore
+      cosign signing and SLSA-aligned build attestations, and arguing
+      with the platform PM about whether image provenance gates should
+      block deploys on Friday afternoons. Maintains a small fork of
+      Falco rules for the workloads he cares most about and has strong
+      opinions about which CNCF projects are production-ready and which
+      are still demoware.
+    personality_traits:
+      - admission-policy author
+      - supply-chain hardener
+      - CNCF-project triagist
+      - opinionated about production readiness
+
+  - name: "Felix Rasmussen"
+    age: 40
+    occupation: "Detection-leaning Infrastructure Security Engineer"
+    background: >
+      Sits between the platform and detection teams at a 1,200-person
+      software company. Writes eBPF probes (mostly Tetragon and bpftrace),
+      runs a Falco deployment that feeds curated events to the SOC, and
+      maintains a Zeek sensor pair on the egress edge for network
+      forensics. The detection team consumes his telemetry; the platform
+      team curses him for the kernel module footprint. Believes that
+      most "detection" vendors solve a routing problem dressed up as a
+      data problem, and would rather spend a week tuning a probe than a
+      day clicking through a SaaS dashboard.
+    personality_traits:
+      - eBPF-fluent
+      - telemetry-pipeline architect
+      - cli-and-config preferred
+      - skeptical of dashboard-shaped products
+
+  # --- Slice 3: Detection Engineering & SOC ---
+  - name: "Imani Booker"
+    age: 34
+    occupation: "Detection Engineer at mid-size SaaS"
+    background: >
+      One of three detection engineers at a 900-person SaaS, embedded in
+      the security operations org but reporting through engineering.
+      Writes Sigma rules and translates them into Splunk SPL and
+      Elastic EQL for the SOC. Maps coverage to MITRE ATT&CK techniques
+      in a Notion board the CISO reviews monthly, and runs a quarterly
+      false-positive audit that has reshaped which detections survive.
+      Her recurring frustration is that vendor "out of the box"
+      detections fire on internal tooling and she can't get the noise
+      down without rewriting them.
+    personality_traits:
+      - Sigma-and-SPL-fluent
+      - MITRE-ATT&CK-mapped
+      - false-positive-tuner
+      - rewrites-vendor-defaults
+
+  - name: "Cole Hartley"
+    age: 28
+    occupation: "SOC analyst transitioning into detection engineering"
+    background: >
+      Eighteen months into a SOC analyst role, Cole has been quietly
+      writing his first production detections — half a dozen Splunk
+      saved searches and a couple of KQL queries for the M365 surface.
+      Pairs weekly with a senior detection engineer who reviews his
+      pull requests, and is grinding through a self-paced Python course
+      on the train so he can move the team off ad-hoc PowerShell
+      enrichment scripts. Self-conscious about gaps in his knowledge,
+      diligent about his runbooks, and the most likely person to file
+      a thoughtful bug report against the team's internal tooling.
+    personality_traits:
+      - up-and-coming
+      - runbook-disciplined
+      - python-learning
+      - thoughtful-bug-reporter
+
+  - name: "Yuna Park"
+    age: 39
+    occupation: "Threat Hunting Lead at security-mature org"
+    background: >
+      Leads a three-person threat hunting team at a global financial
+      services firm with a mature security program. Runs hypothesis-driven
+      hunts on a six-week cadence — typically pulling Endpoint Detection
+      telemetry, identity logs, and DNS into a Jupyter notebook and
+      grinding through outliers. Stitches threat intelligence from a
+      paid feed and an ISAC into hunt hypotheses, and her output is the
+      detections the engineering team productionizes the next quarter.
+      Deeply skeptical of "AI-powered hunting" pitches; will spend
+      thirty minutes asking what the vendor's labeled training set
+      actually contains before accepting a meeting.
+    personality_traits:
+      - hypothesis-driven
+      - notebook-native analyst
+      - intel-to-detection feeder
+      - skeptical of "AI-powered" claims
+
+  # --- Slice 4: Security Buying / GRC ---
+  - name: "Eitan Levi"
+    age: 47
+    occupation: "vCISO / fractional CISO across Series A/B portfolio"
+    background: >
+      Runs a small advisory practice serving four to six early-stage
+      SaaS companies at a time as their fractional CISO. Each client is
+      pre-SOC-2 or mid-attestation; his job is to pick the smallest
+      defensible tool stack that will get them through audit and not
+      collapse when they triple in headcount. Strongly opinionated
+      about vendor sprawl — refuses to bring in a tool unless he can
+      personally name the alternative he's choosing it over and the
+      condition under which he would swap. Bills hourly, so every
+      vendor demo eats his margin if it doesn't decide something.
+    personality_traits:
+      - portfolio-perspective
+      - decision-density-driven
+      - anti-vendor-sprawl
+      - swap-condition documenter
+
+  - name: "Beatriz Salgado"
+    age: 35
+    occupation: "Security GRC Engineer at regulated enterprise"
+    background: >
+      Senior GRC engineer at a 6,000-person enterprise pursuing FedRAMP
+      Moderate authorization on top of an existing ISO 27001 / SOC 2
+      Type II baseline. Owns the evidence automation pipeline — a
+      Drata deployment glued to the cloud control plane via custom
+      collectors — and spends most of her time arguing with auditors
+      about whether a screenshot from 89 days ago counts as current.
+      Treats GRC as an engineering problem: every recurring control
+      should be a piece of code that produces a piece of evidence on a
+      schedule, not a calendar invite.
+    personality_traits:
+      - evidence-automation-first
+      - auditor-fluent
+      - control-as-code
+      - calendar-invite-allergic
+
+  - name: "Marcus Whitfield"
+    age: 49
+    occupation: "Director of Security Buying at mid-market"
+    background: >
+      Heads security strategy and vendor management at a 2,500-person
+      mid-market business with twelve months of vendor consolidation
+      ahead of him. Runs RFPs that involve four-stage scoring rubrics,
+      reference calls he sets up himself, and a quarterly briefing to
+      the board's risk committee. Treats every renewal as an
+      opportunity to either consolidate or walk away; treats every new
+      category as a forcing function to make the existing stack
+      justify itself. Trusts technical practitioners on his team but
+      makes the final call on spend, and the question he keeps asking
+      vendors is "what does this let me turn off?"
+    personality_traits:
+      - RFP-driven buyer
+      - consolidation-minded
+      - board-reporting cadence
+      - asks "what can I turn off?"
