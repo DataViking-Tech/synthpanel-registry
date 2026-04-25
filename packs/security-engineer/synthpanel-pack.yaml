@@ -1,5 +1,6 @@
 version: "1"
 id: "security-engineer"
+name: "Security Engineer"
 description: >
   Security engineering practitioners across application security, infrastructure
   security, detection engineering, GRC, and security tooling buying. Designed
