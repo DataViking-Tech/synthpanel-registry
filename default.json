@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T16:24:30Z",
+  "generated_at": "2026-04-25T04:21:04Z",
   "packs": [
     {
       "added_at": "2026-04-23",
@@ -12,6 +12,20 @@
       "kind": "persona",
       "name": "contrarian-stress",
       "path": "packs/contrarian-stress/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-24",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Fintech product managers across consumer banking, B2B payments, lending, wealth management, and crypto/web3. Designed for fintech feature research, regulatory-compliant product surveys, and PM/eng workflow studies in regulated environments.",
+      "id": "fintech-pm",
+      "kind": "persona",
+      "name": "fintech-pm",
+      "path": "packs/fintech-pm/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },

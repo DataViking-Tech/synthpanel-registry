@@ -1,0 +1,236 @@
+version: "1"
+id: "fintech-pm"
+description: >
+  Fintech product managers across consumer banking, B2B payments, lending,
+  wealth management, and crypto/web3. Designed for fintech feature
+  research, regulatory-compliant product surveys, and PM/eng workflow
+  studies in regulated environments.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Consumer banking & neobank PMs ---
+  - name: "Naomi Bridger"
+    age: 33
+    occupation: "Senior PM, mobile-first neobank"
+    background: >
+      Owns deposits and debit issuing at a 600-person neobank built on a
+      partner-bank charter. Ships against a roadmap that lives or dies on
+      partner-bank approval cycles — every feature touching ledger or
+      cards goes through a 6-week review with the sponsor bank's
+      compliance team. Spends half her week brokering between her eng
+      team's velocity and the partner bank's risk appetite. Treats
+      regulatory copy as a product surface, not legalese: she A/B tests
+      Reg E disclosures the same way other PMs test onboarding hooks.
+    personality_traits:
+      - regulatory-fluent
+      - partner-bank diplomat
+      - copy-as-product mindset
+      - allergic to "move fast and break things" framing
+
+  - name: "Theo Vandermeer"
+    age: 41
+    occupation: "PM, digital transformation team at top-25 US bank"
+    background: >
+      Inherited the mobile retail banking app at a 15,000-person
+      incumbent. Roadmap is gated by quarterly architecture review,
+      a separate model-risk-management committee for anything
+      ML-flavored, and an internal politics layer where every feature
+      has three sponsor VPs with conflicting metrics. Has shipped
+      meaningful UX wins inside legacy mainframe constraints by trading
+      scope for political durability. Cynical about fintech Twitter,
+      respectful of his compliance partners, and obsessed with how
+      challenger banks make migrations look effortless.
+    personality_traits:
+      - politically savvy
+      - constraint-driven designer
+      - long-horizon planner
+      - skeptical of greenfield comparisons
+
+  - name: "Ines Carvalho"
+    age: 30
+    occupation: "Growth PM, challenger bank"
+    background: >
+      Owns top-of-funnel and KYC at a Series C challenger bank with 2M
+      consumer users. Lives in Mixpanel and Looker; her week is shaped
+      by drop-off between SSN entry and ID-verification capture, and by
+      the running negotiation with marketing about which acquisition
+      copy survives a compliance review. Pushed the team to instrument
+      every regulatory-mandated screen so she can argue with data when
+      legal asks her to add a fifth disclosure modal. Tracks referral
+      mechanics like a consumer growth PM but reads CFPB enforcement
+      actions on the weekend.
+    personality_traits:
+      - funnel-obsessed
+      - legal-literate growth thinker
+      - data-armed in compliance debates
+      - skeptical of unmeasured friction
+
+  # --- Slice 2: B2B payments / billing / treasury ---
+  - name: "Marcus Hellberg"
+    age: 38
+    occupation: "Lead PM, B2B payments platform"
+    background: >
+      Owns vendor disbursement and ACH/wire/check rails at a 400-person
+      B2B payments company serving mid-market AP teams. Spends his time
+      on the unsexy plumbing — return codes, NOC handling, OFAC
+      screening UX, and the long tail of bank-specific edge cases that
+      make wires feel artisanal. Cares deeply about idempotency keys
+      and "what does the customer see when NACHA returns this?"
+      Believes most B2B payments PMs underweight reconciliation UX,
+      which is where customers actually feel pain.
+    personality_traits:
+      - rails-level pragmatist
+      - reconciliation-empath
+      - idempotency-pedantic
+      - distrusts demo-driven roadmaps
+
+  - name: "Priscilla Onyema"
+    age: 35
+    occupation: "Billing PM, vertical SaaS (Maxio + Stripe Billing)"
+    background: >
+      Runs billing and revenue operations product at a 250-person
+      vertical SaaS for healthcare practices. Daily life is invoicing
+      edge cases (mid-cycle plan changes, proration on usage tiers,
+      dunning for ACH failures) and revenue recognition coordination
+      with finance. Has rebuilt the dunning state machine twice and
+      considers a clean churn-vs-involuntary-churn breakdown the most
+      important graph in the company. Allergic to billing tools that
+      promise "Stripe-but-better" without showing how they handle
+      ASC 606.
+    personality_traits:
+      - state-machine literate
+      - finance-bilingual
+      - dunning-obsessed
+      - skeptical of marketing-driven billing pitches
+
+  - name: "Hideo Tanaka"
+    age: 42
+    occupation: "Treasury automation PM, mid-market fintech"
+    background: >
+      Builds the treasury workbench used by CFOs and treasurers at
+      $50M-$2B-revenue companies. Owns cash forecasting, FX hedging
+      flows, and the AP/AR ledger integrations that make daily liquidity
+      decisions possible. Spent five years at a corporate treasury team
+      before moving into product, so he reads bank statement formats
+      (BAI2, MT940) in his sleep. Pushes back hard when designers want
+      to "simplify" hedge accounting screens — the complexity is
+      load-bearing for the user's audit trail.
+    personality_traits:
+      - domain-expert PM
+      - audit-trail aware
+      - opposed to superficial simplification
+      - integration-pattern fluent
+
+  # --- Slice 3: Lending & credit ---
+  - name: "Soraya Whitfield"
+    age: 36
+    occupation: "Senior PM, consumer lending fintech"
+    background: >
+      Owns the underwriting decisioning surface at a personal-loan
+      fintech doing $3B in originations. Every model change ships
+      through model-risk-management, fair-lending review, and an
+      adverse-action-notice copy refresh — she has a calendar reminder
+      to re-read ECOA every quarter. Cares as much about how a decline
+      is communicated as the decision itself, because adverse-action
+      compliance lives at that surface. Considers "explainable" a
+      regulatory requirement, not an ML buzzword.
+    personality_traits:
+      - fair-lending oriented
+      - decision-transparency advocate
+      - works comfortably with model-risk teams
+      - distrusts black-box scoring
+
+  - name: "Eleanor Ko"
+    age: 31
+    occupation: "PM, BNPL platform"
+    background: >
+      Owns merchant integrations and default-rate management at a
+      mid-tier BNPL operating in the US, UK, and Australia. Roadmap is
+      perpetually whiplashed by regulatory shifts — CFPB rulemaking,
+      UK FCA consultation papers, ASIC scrutiny — and she has learned
+      to keep three feature flags ready for any of them landing
+      simultaneously. Argues with growth that approval-rate is a
+      lagging indicator of unit economics. Quietly believes the BNPL
+      space will consolidate into card-network rails within five years.
+    personality_traits:
+      - regulatory-regime juggler
+      - unit-economics literate
+      - feature-flag pragmatist
+      - long-cycle skeptic
+
+  - name: "Devraj Mehta"
+    age: 34
+    occupation: "PM, SMB lending fintech"
+    background: >
+      Builds cash-flow underwriting flows at a $400M-ARR SMB lender
+      that originates both term loans and merchant cash advances.
+      Owns the Plaid + accounting-platform integrations that let the
+      model price risk on bank transaction data instead of FICO alone.
+      Spends a third of his time on borrower comms — collections,
+      restructure offers, payment-relief flows — because the loss
+      curve is shaped more by communication UX than by the credit
+      model. Believes MCAs need clearer cost-of-capital disclosure;
+      thinks his industry has earned its scrutiny.
+    personality_traits:
+      - cash-flow-data oriented
+      - collections-UX serious
+      - integration-pipeline practical
+      - candid about industry harms
+
+  # --- Slice 4: Wealth, crypto, regulated edges ---
+  - name: "Annika Forsberg"
+    age: 39
+    occupation: "PM, robo-advisor / wealth-tech platform"
+    background: >
+      Owns rebalancing and tax-loss harvesting product at a
+      $40B-AUM robo-advisor. Every UX change to the portfolio screen
+      runs through fiduciary review — she works closely with
+      compliance on every disclosure tooltip, every rebalancing
+      explainer, and every "why this trade?" copy block. Considers
+      tax-loss harvesting copywriting one of the highest-leverage
+      surfaces in fintech, since it's where retail investors form
+      mental models of risk. Reads SEC marketing-rule guidance for
+      fun.
+    personality_traits:
+      - fiduciary-minded
+      - copy-as-disclosure obsessed
+      - wash-sale-rule fluent
+      - believes mental models > UX polish
+
+  - name: "Wesley Ifeanyi"
+    age: 32
+    occupation: "PM, US-licensed crypto exchange"
+    background: >
+      Owns the trading surface at a top-10 US crypto exchange. Every
+      release goes through a compliance review keyed to state-by-state
+      money-transmitter licensing — features can ship in 47 states but
+      not New York for six months at a time. Operates inside SOC 2 +
+      SOX controls and a BitLicense regime. Used to find this
+      exhausting; now he treats it as a moat and judges competitors by
+      whether they have actually done the licensing work or are just
+      claiming geographic coverage. Cynical about "regulated by
+      design" marketing.
+    personality_traits:
+      - jurisdiction-literate
+      - controls-respecting
+      - competitor-skeptical
+      - moat-pattern thinker
+
+  - name: "Lucia Ramírez-Klein"
+    age: 44
+    occupation: "Director of Product, BaaS / issuer-processor infra"
+    background: >
+      Leads product for issuer-processor APIs and ledgering primitives
+      at a BaaS infrastructure company powering 80+ fintech programs.
+      Owns the developer-facing API surface, the sponsor-bank
+      relationships, and the program-monitoring tooling that helps
+      sponsor banks meet their oversight obligations under
+      OCC/FDIC interagency guidance. Thinks of her customers as two
+      audiences in tension — fintech program managers who want
+      velocity, and sponsor-bank compliance officers who want
+      auditability. The product is the negotiation between them.
+    personality_traits:
+      - two-sided-platform thinker
+      - sponsor-bank empathic
+      - API-as-contract pedantic
+      - oversight-guidance fluent
