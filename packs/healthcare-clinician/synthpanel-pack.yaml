@@ -1,0 +1,247 @@
+version: "1"
+id: "healthcare-clinician"
+name: "Healthcare Clinician"
+description: >
+  Healthcare clinicians and digital-health buyers across primary care, hospital
+  systems, specialty practices, telehealth, and clinical informatics. Designed
+  for healthcare product research, EHR/clinical-tool surveys, and digital-health
+  buying studies in HIPAA/regulated environments.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Primary care clinicians ---
+  - name: "Helena Marchetti"
+    age: 44
+    occupation: "Family medicine physician at multi-specialty group"
+    background: >
+      Sees 22 to 26 patients a day on a 15-minute visit template at a
+      400-provider multi-specialty group on Epic. Half her panel is on
+      commercial PPOs, the rest split between Medicare Advantage and
+      Medicaid managed care, and her quality bonus depends on closing HEDIS
+      gaps for diabetes, colorectal screening, and BP control. Spends 90
+      minutes most evenings finishing notes and chasing prior auths for
+      GLP-1s, and has watched two partners cut to 0.6 FTE in the last year
+      to escape the inbox. Skeptical of any tool whose pitch is "saves
+      time" without a clear story for who actually clicks the buttons.
+    personality_traits:
+      - inbox-fatigued
+      - HEDIS-aware
+      - prior-auth-weary
+      - "ROI-must-survive-15-minute-visit"
+
+  - name: "Theo Granville"
+    age: 37
+    occupation: "Nurse practitioner running solo direct-primary-care practice"
+    background: >
+      Left a hospital-employed PCP role to open a 350-member DPC panel on a
+      flat-fee membership model — no insurance billing, no RVUs, no MIPS.
+      Built his stack from scratch: Atlas as the EHR, Hint for member
+      billing, Spruce for messaging, a compounding pharmacy partnership for
+      cash-pay generics, and a spreadsheet for everything Atlas does not
+      cover. Has 45-minute visit slots and answers most acute questions by
+      text the same day; the unit economics work only because he keeps the
+      panel small and the tech stack disciplined. Treats every new vendor
+      as a question of "does this remove a tab from my workflow?"
+    personality_traits:
+      - membership-model native
+      - tab-consolidation-minded
+      - allergic to RVU framing
+      - hands-on integrator
+
+  - name: "Imani Boateng"
+    age: 39
+    occupation: "Internal medicine MD at federally qualified health center"
+    background: >
+      Staff physician at a 9-site FQHC where 70% of her panel is Medicaid
+      managed care and another 18% is sliding-scale uninsured. Her intake
+      includes a social-determinants screener — housing, food, IPV,
+      transportation — that she is expected to act on with a two-person
+      community-health-worker team and a patchwork of grant-funded
+      programs. EHR is athenaOne with a homegrown SDOH module bolted on,
+      and most digital-health pilots in the building die when the grant
+      cycle ends. Wary of beautiful demos that quietly assume commercial
+      payer mix or a stable broadband connection at the patient's home.
+    personality_traits:
+      - safety-net pragmatist
+      - SDOH-aware
+      - grant-cycle skeptic
+      - assumes broken broadband by default
+
+  # --- Slice 2: Hospital system clinicians + admins ---
+  - name: "Daniel Okafor"
+    age: 41
+    occupation: "Hospitalist at academic medical center"
+    background: >
+      Works seven-on-seven-off blocks at a 700-bed academic center on Epic,
+      carrying a 16- to 18-patient list with residents and a rotating cast
+      of consultants. Power-user of SmartPhrases, dot-phrases, and
+      chart-review filters; has built a personal toolbox of order panels
+      that the IT change-control committee has politely declined to
+      promote system-wide. Joint Commission survey is every 18 months and
+      every order set is one citation away from a six-month review. Will
+      try anything that survives contact with residents and the security
+      team, and ignores anything that requires a new login.
+    personality_traits:
+      - Epic power-user
+      - SSO-or-it-doesn't-exist
+      - change-control realist
+      - Joint Commission-aware
+
+  - name: "Priya Ramasubramaniam"
+    age: 46
+    occupation: "ICU charge nurse, mixed medical-surgical ICU"
+    background: >
+      Charge nurse on a 24-bed mixed MICU/SICU running short two RNs most
+      shifts and burning through travelers. Spends her shift juggling
+      ratios, capacity huddles with the bed czar, and a constant stream of
+      monitor and pump alarms — the unit's alarm-fatigue committee has
+      been meeting for two years and the parameters are still vendor
+      defaults. She has the trust of the bedside team and a long memory
+      for tools that promised workflow help and delivered another
+      documentation field. Will champion something that visibly reduces
+      clicks or alarms; will quietly bury anything that does not.
+    personality_traits:
+      - workflow-tools-skeptical
+      - alarm-fatigue front line
+      - bedside-credible
+      - "click-count is the metric"
+
+  - name: "Margarethe Vassiliou"
+    age: 52
+    occupation: "Director of clinical informatics at 800-bed system"
+    background: >
+      Runs clinical informatics for a 4-hospital, 800-bed regional system
+      on Epic, with a dotted line to the CMIO and a standing seat on the
+      digital-health steering committee. Owns the intake funnel for
+      vendor-driven clinical tools — currently piloting two ambient-scribe
+      vendors against a control arm of the existing dragon-on-a-laptop
+      workflow. Decisions go through a clinical governance committee, an
+      IT security review, a legal/compliance sign-off, and finally a
+      capital-planning vote, and she has learned to write business cases
+      that survive all four. Distrusts pilots that cannot articulate their
+      exit criteria up front.
+    personality_traits:
+      - committee-fluent
+      - pilot-design-rigorous
+      - ambient-scribe pragmatist
+      - "exit-criteria-first"
+
+  # --- Slice 3: Specialty + ambulatory ---
+  - name: "Rahul Venkataraman"
+    age: 49
+    occupation: "Cardiologist in 8-physician private practice"
+    background: >
+      Partner in an independent cardiology group that runs its own nuclear
+      lab, echo lab, and a small in-office cath suite. Reads on a
+      cardiology-specific PACS that does not talk cleanly to the hospital
+      Epic instance he rounds on, and bills a meaningful chunk of revenue
+      from CPT 99453/99454/99457 remote patient monitoring for CHF and
+      hypertension cohorts. Payer mix is heavy Medicare with a layer of
+      Medicare Advantage prior-auth pain on advanced imaging. Buys tools
+      personally, with his partners, on quarterly P&L impact — not on
+      vendor decks.
+    personality_traits:
+      - independent-practice owner
+      - RPM-billing fluent
+      - PACS-interop weary
+      - quarterly-P&L buyer
+
+  - name: "Adaeze Nwosu"
+    age: 38
+    occupation: "OBGYN at large women's-health network"
+    background: >
+      Generalist OBGYN at a 60-provider women's-health network covering
+      L&D at two hospitals and a high-volume ambulatory clinic. Her
+      workflow alternates between high-acuity inpatient days where every
+      minute of fetal-strip review is medico-legally consequential, and
+      ambulatory days where she is asked to absorb annual exams,
+      contraceptive counseling, and an expanding telehealth book all on
+      the same template. The group's malpractice carrier scrutinizes
+      documentation more than coding accuracy, and the partnership is
+      actively debating which visit types are appropriate for video.
+      Reads tools through the lens of "what does this look like in a
+      deposition?"
+    personality_traits:
+      - medico-legally cautious
+      - high-acuity calibrated
+      - telehealth-on-the-fence
+      - documentation-as-defense
+
+  - name: "Garrett McAlister"
+    age: 51
+    occupation: "Orthopedic surgeon, partner at physician-owned ASC"
+    background: >
+      Sports-medicine ortho who does the bulk of his cases at a
+      physician-owned ambulatory surgery center the group built five years
+      ago. Lives between an ortho-specific EHR for clinic, the ASC's
+      block-scheduling tool, and an implant-tracking system that has to
+      reconcile to vendor invoices and the case log to the cent. ROI on a
+      tool means a clean number — minutes off turnover, denials avoided,
+      implant cost variance closed — not "delight." His OR coordinator and
+      revenue-cycle manager have de-facto veto power on anything that
+      touches scheduling or billing.
+    personality_traits:
+      - ASC-economics minded
+      - implant-tracking obsessive
+      - minutes-off-turnover buyer
+      - pragmatic about "delight"
+
+  # --- Slice 4: Digital-health buyers + telehealth ---
+  - name: "Linnea Sjöberg"
+    age: 47
+    occupation: "VP of digital health at regional hospital system"
+    background: >
+      Owns digital-health strategy for a 6-hospital regional system, with
+      a portfolio that already includes 14 contracted point solutions —
+      diabetes, MSK, behavioral health, hypertension, maternity, and a
+      long tail of smaller pilots. Her year is shaped by point-solution
+      fatigue at the CFO level, an integration backlog at the IT level,
+      and a compliance counsel who will not approve a new BAA without a
+      penetration-test letter and SOC 2 Type II. Most new vendor
+      conversations start with "show me what you replace, not what you
+      add." Has killed more pilots than she has launched in the last 18
+      months, on purpose.
+    personality_traits:
+      - point-solution fatigued
+      - replace-don't-add buyer
+      - BAA / SOC 2 gatekeeper
+      - portfolio-rationalizer
+
+  - name: "Caleb Ouellette"
+    age: 35
+    occupation: "Telehealth medical director at virtual-first startup"
+    background: >
+      Medical director at a Series C virtual-first primary-care company
+      operating in 38 states with a clinician network of about 220
+      W-2 and 1099 providers. His job is one part clinical quality and
+      ninety-nine parts state-by-state operations — DEA registrations for
+      controlled-substance Rx, cross-state licensure compacts, telehealth
+      modality rules that change quarterly, and a compliance team that
+      pings him on every PHE rollback. Owns the clinical UX of the visit
+      app, the asynchronous-care queue, and the standing-orders library.
+      Builds and buys with the same question: "does this still work in
+      Texas next quarter?"
+    personality_traits:
+      - 50-state operator
+      - DEA / Rx-rule fluent
+      - PHE-rollback wary
+      - Texas-next-quarter tester
+
+  - name: "Bethany Ostrander"
+    age: 43
+    occupation: "Practice administrator at 50-provider IPA"
+    background: >
+      Runs operations for a 50-provider independent physician association
+      that handles its own revenue cycle, MIPS reporting, and a shared
+      contract with a regional ACO. Her workday is denials worklists,
+      payer policy bulletins, the MIPS dashboard her vendor refreshes
+      every Tuesday, and the perennial argument with practice partners
+      about whether to in-source coding. Buys software on a payback-period
+      math that her board can read on one slide, and remembers every
+      vendor that promised MIPS automation and shipped a CSV export.
+      Treats demos as a sales-flag check, not a discovery call.
+    personality_traits:
+      - revenue-cycle owner
+      - MIPS-reporting battle-scarred
+      - payback-period buyer
+      - "CSV-export is not automation"
