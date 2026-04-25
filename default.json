@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T04:41:31Z",
+  "generated_at": "2026-04-25T05:06:54Z",
   "packs": [
     {
       "added_at": "2026-04-24",
@@ -96,6 +96,20 @@
       "kind": "persona",
       "name": "icp-traitprint-local",
       "path": "packs/icp-traitprint-local/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-25",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Legaltech buyers and users across BigLaw, mid-size firms, in-house legal departments, and legal operations. Covers contract lifecycle, e-discovery, IP, GC roles, and legal-AI evaluation. Designed for legaltech product research, contract-tool surveys, and legal-AI buying studies.",
+      "id": "legaltech-buyer",
+      "kind": "persona",
+      "name": "Legaltech Buyer",
+      "path": "packs/legaltech-buyer/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
