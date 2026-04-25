@@ -1,6 +1,20 @@
 {
-  "generated_at": "2026-04-25T04:25:03Z",
+  "generated_at": "2026-04-25T04:39:06Z",
   "packs": [
+    {
+      "added_at": "2026-04-24",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Climate-tech buyers across sustainability/ESG, energy management, carbon accounting, supply-chain decarbonization, and renewables operations. Designed for climate-product research, carbon-software surveys, and enterprise sustainability tooling studies.",
+      "id": "climate-tech-buyer",
+      "kind": "persona",
+      "name": "Climate-Tech Buyer",
+      "path": "packs/climate-tech-buyer/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
     {
       "added_at": "2026-04-23",
       "author": {
