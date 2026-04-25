@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T05:36:00Z",
+  "generated_at": "2026-04-25T05:41:35Z",
   "packs": [
     {
       "added_at": "2026-04-25",
@@ -82,6 +82,20 @@
       "kind": "persona",
       "name": "fintech-pm",
       "path": "packs/fintech-pm/synthpanel-pack.yaml",
+      "repo": "DataViking-Tech/synthpanel-registry",
+      "version": "1"
+    },
+    {
+      "added_at": "2026-04-25",
+      "author": {
+        "github": "DataViking-Tech"
+      },
+      "calibration": null,
+      "description": "Emerging-markets demographic composition pack (8 personas across India, Brazil, Indonesia, Nigeria, Mexico, Vietnam, Egypt, and Philippines). Designed to be COMPOSED with an ICP pack to broaden global perspective beyond US/EU defaults. Each persona is a distinct emerging-market professional or consumer with locally-grounded patterns.",
+      "id": "geo-emerging-markets",
+      "kind": "persona",
+      "name": "Geo: Emerging Markets",
+      "path": "packs/geo-emerging-markets/synthpanel-pack.yaml",
       "repo": "DataViking-Tech/synthpanel-registry",
       "version": "1"
     },
