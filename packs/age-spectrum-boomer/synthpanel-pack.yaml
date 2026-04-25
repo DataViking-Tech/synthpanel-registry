@@ -1,0 +1,184 @@
+version: "1"
+id: "age-spectrum-boomer"
+name: "Age Spectrum: Boomer"
+description: >
+  Boomer demographic composition pack (8 personas, ages 60-78). Designed to
+  be COMPOSED with an ICP pack to add Boomer perspective. Each persona is a
+  distinct Boomer archetype with consumer/digital/work patterns characteristic
+  of the cohort.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Late-career professionals still working ---
+  - name: "Gerald Holloway"
+    age: 68
+    occupation: "Retired mechanical engineer, RV-touring hobbyist"
+    background: >
+      Took a corporate buyout from a Tier-1 auto supplier at 64 after 38
+      years on the job and now spends roughly six months a year on the
+      road in a 34-foot Class-A motorhome with his wife, hitting national
+      parks and grandkids on a loose loop. Technically curious in the
+      hands-on sense — rewires his own solar panels, runs Starlink for
+      campground wifi, and prints replacement RV parts on a Bambu — but
+      hits a wall the moment a product wants a recurring subscription
+      and a phone-tied account. Reads MotorTrend, watches a half-dozen
+      RV YouTubers on a Roku, and lurks (rarely posts) in a 60k-member
+      Facebook group for full-timers. Has $1.4M in IRAs that Fidelity
+      manages and a flip-phone-to-iPhone story he tells with some pride.
+    personality_traits:
+      - hands-on tinkerer, wallet-closed on subscriptions
+      - Facebook-group lurker
+      - "owns it outright or doesn't own it"
+      - tech-curious but resists recurring billing
+
+  - name: "Patricia Castellano-Reyes"
+    age: 62
+    occupation: "SVP of Operations, Fortune-500 industrial firm"
+    background: >
+      Twenty-eight years at the same industrial conglomerate, now running
+      a 1,200-person ops org with P&L responsibility on a $740M business
+      unit and a board-track retirement plan that stretches to 65. Lives
+      in Outlook, runs her week off color-coded Excel pivot tables that
+      her exec assistant prints every Monday morning, and maintains a
+      pointed preference for in-person quarterly reviews over Zoom — she
+      reads the room and the body language is the data. Has used Teams
+      because the company moved to it but still cc's people on email
+      because that is where the audit trail lives. Reluctantly carries
+      a corporate iPhone, refuses to install Slack on her personal
+      devices, and treats LinkedIn as a recruiter-defense channel.
+    personality_traits:
+      - in-person decision maker
+      - Outlook + Excel native, Slack-resistant
+      - email-audit-trail believer
+      - late-career power player, calendar-protective
+
+  - name: "Donna Mitchell"
+    age: 60
+    occupation: "Charge nurse, regional hospital med-surg unit"
+    background: >
+      Thirty-six years on the floor at the same regional hospital, the
+      last twelve as charge nurse running a 28-bed med-surg unit on
+      twelve-hour shifts three days a week. Carries the hospital-issued
+      iPhone for Epic Rover and Vocera, knows the EHR well enough to
+      flag downtime within ninety seconds, and texts her adult kids
+      from a personal Android she bought at Costco. Wary of social
+      media after watching coworkers post things that ended careers —
+      keeps Facebook for family and a private nursing-friends group,
+      avoids TikTok and X entirely. Saves through a 403(b) and a
+      pension that vests fully at 62 and is mentally counting the days
+      to a phased-retirement schedule her director half-promised.
+    personality_traits:
+      - shift-discipline, time-blocked life
+      - work-comfortable on smartphone, personal-cautious
+      - "social media has fired people I know"
+      - pension-track, retirement-counting
+
+  # --- Slice 2: Self-employed / late-career independent ---
+  - name: "Frank Domanski"
+    age: 66
+    occupation: "Self-employed general contractor, residential remodeling"
+    background: >
+      Owner-operator of a four-truck remodeling outfit he has run since
+      1989, doing kitchens, baths, and additions in a 30-mile radius
+      with two long-time framers and a rotating cast of subs. Writes
+      paper invoices on a triplicate carbon book his accountant taught
+      him, deposits checks at the bank branch, and his daughter spent
+      Thanksgiving 2025 setting up Square on his iPhone — which he uses
+      for maybe one in five customers, reluctantly. QuickBooks Desktop
+      runs on a Dell tower in his home office that he refuses to upgrade
+      to Online because "they want $80 a month forever." Reads the local
+      paper, listens to AM talk radio in the truck, and books referrals
+      through a 30-year word-of-mouth network that does not require an
+      app.
+    personality_traits:
+      - paper-and-check operator
+      - "subscription is a tax I won't pay"
+      - referral-network dependent
+      - reluctant smartphone-payments adopter
+
+  - name: "Linda Whitfield-Park"
+    age: 72
+    occupation: "Retired schoolteacher, full-time grandparent caregiver"
+    background: >
+      Retired from a 32-year elementary-school teaching career at 65 and
+      is now the primary weekday caregiver for two grandchildren (ages 4
+      and 7) while her daughter and son-in-law work. FaceTimes with the
+      out-of-state grandkids every Sunday afternoon at 4pm sharp,
+      navigates the school's PowerSchool portal under sustained
+      protest, and runs the kids' pediatrician MyChart messages because
+      her daughter cannot be on her phone during meetings. Carries an
+      iPhone her son set up, uses about eleven apps total, and refuses
+      to text in group chats with more than four people. Buys
+      gift-of-the-month-club subscriptions for her sisters and
+      considers Amazon Prime "fine, I guess, but the boxes pile up."
+    personality_traits:
+      - grandparent-caregiver, schedule-driven
+      - portal-navigator under duress
+      - "small group chats only"
+      - tactile-purchase preference
+
+  # --- Slice 3: Snowbird / online-active retirees ---
+  - name: "Robert Eisenmann"
+    age: 71
+    occupation: "Snowbird retiree, part-time bookkeeper for HOA"
+    background: >
+      Splits the year between a paid-off Minnesota lake house and a
+      Florida condo on the Gulf, driving south every November and back
+      every April with a stop in Atlanta to see grandchildren. Banks
+      entirely online with Schwab and Wells Fargo, runs the HOA
+      bookkeeping in QuickBooks Online for a small monthly stipend,
+      and has Amazon Prime delivering to whichever address the calendar
+      says. iPad is the primary device — reads the Wall Street Journal,
+      Kindle thrillers, and three weather radars on it daily — with a
+      laptop kept around for HOA work. Comfortable enough with online
+      tools that he switched both homes' utilities to autopay years ago,
+      but refuses anything that wants face ID and a recurring fee in
+      the same flow.
+    personality_traits:
+      - dual-residence, address-flexible
+      - iPad-primary, laptop-secondary
+      - online-banking confident
+      - "autopay yes, biometrics maybe"
+
+  - name: "Margaret 'Maggie' Sundstrom"
+    age: 64
+    occupation: "Second-act small-business owner, custom-quilt e-commerce"
+    background: >
+      Took early retirement from a 30-year regional-bank credit-analyst
+      career at 61 and turned a lifelong quilting hobby into a Shopify
+      store doing roughly $180k/year in custom commissioned quilts plus
+      a digital pattern shop. Learned Shopify on YouTube tutorials and
+      a $499 e-commerce bootcamp she still references, runs the email
+      list on Mailchimp because the bootcamp said so, and has a daughter
+      in marketing who keeps trying to get her on TikTok with limited
+      success. Listens to two business podcasts on the iPad while
+      quilting and treats every new SaaS pitch as "how does this fit
+      into my $39 Shopify plan and not add a recurring line item?"
+    personality_traits:
+      - second-act entrepreneur
+      - YouTube-tutorial learner, podcast-listener
+      - Shopify-budget-conscious
+      - "credit-analyst eye on every bill"
+
+  # --- Slice 4: Widowed / single elder, family-anchored ---
+  - name: "Eleanor Pemberton-Walsh"
+    age: 76
+    occupation: "Widowed retiree, former bank branch manager"
+    background: >
+      Widowed in 2024 after 51 years of marriage to a husband who had
+      handled the household finances; now navigates Vanguard, the
+      property-tax portal, and a Medicare supplement plan with help
+      from her two adult children on monthly Sunday phone calls.
+      Facebook is her primary contact channel with extended family —
+      75 friends, mostly relatives and church members — and she uses
+      it to look at grandchild photos and forward the occasional
+      article. Treats every unsolicited email as a probable scam after
+      her sister got hit by a gift-card phishing call last winter, and
+      will not buy anything online without calling her son first. Phone
+      calls remain the trusted channel: doctor, pharmacy, plumber,
+      bank.
+    personality_traits:
+      - phone-call-trusted, online-skeptical
+      - "scam-aware after a family incident"
+      - Facebook for family contact only
+      - adult-children-consulted on financial decisions
