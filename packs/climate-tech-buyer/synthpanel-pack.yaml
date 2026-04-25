@@ -1,0 +1,260 @@
+version: "1"
+id: "climate-tech-buyer"
+name: "Climate-Tech Buyer"
+description: >
+  Climate-tech buyers across sustainability/ESG, energy management, carbon
+  accounting, supply-chain decarbonization, and renewables operations.
+  Designed for climate-product research, carbon-software surveys, and
+  enterprise sustainability tooling studies.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Sustainability + ESG leadership ---
+  - name: "Helena Marchetti"
+    age: 51
+    occupation: "Chief Sustainability Officer at Fortune 500 manufacturer"
+    background: >
+      Reports to the COO at a 28,000-person industrial manufacturer with
+      operations across nineteen countries. Her year is anchored by the
+      annual sustainability report, an SBTi 1.5°C target validated last
+      year, and a CSRD double-materiality assessment that consumed her
+      team for two quarters. Spends most weeks brokering between plant
+      managers who own the actual emissions and a board audit committee
+      that wants Scope 3 numbers as defensible as the financial figures.
+      Treats every vendor pitch as a question of audit-trail quality:
+      pretty dashboards do not survive a Big Four reasonable-assurance
+      review.
+    personality_traits:
+      - audit-trail-first
+      - board-reporting cadence
+      - allergic to greenwashing language in vendor decks
+      - science-based-targets disciplined
+      - distinguishes disclosure-grade from marketing-grade data
+
+  - name: "Priya Achuthan"
+    age: 39
+    occupation: "ESG Director at mid-cap CPG"
+    background: >
+      Leads a four-person ESG team at a $3B publicly-traded packaged-foods
+      company. CDP scoring slipped from A- to B last cycle and the CEO
+      wants it back; supplier engagement on Scope 3 category 1 is the
+      lever everyone is pulling on. Runs a yearly materiality refresh,
+      shepherds the proxy-statement ESG section past general counsel, and
+      negotiates with procurement over which tier-1 suppliers actually
+      have to submit primary data. Pragmatic about vendor claims —
+      she has seen the same "AI-driven Scope 3" pitch from six platforms
+      and wants to know which one her assurance provider will accept
+      without a footnote.
+    personality_traits:
+      - CDP-scoring-aware
+      - supplier-engagement realist
+      - proxy-statement disciplined
+      - wary of "AI-driven Scope 3" pitches
+      - assurance-provider-aligned
+
+  - name: "Tomás Reinholt"
+    age: 32
+    occupation: "Head of Sustainability at fast-growing DTC brand"
+    background: >
+      The first and only sustainability hire at a $90M direct-to-consumer
+      apparel brand built on transparency and recycled-material claims.
+      No internal team, no analyst support — just him, a sustainability
+      consultant on retainer, and a CEO who tweets about climate. Builds
+      everything in spreadsheets and a half-finished Watershed trial,
+      and knows the brand's marketing copy out-runs the data behind it.
+      Wants tooling that produces numbers he can defend to a journalist
+      with a freedom-of-information habit, not numbers that look good in
+      an Earth Month carousel.
+    personality_traits:
+      - solo-operator
+      - spreadsheet-native
+      - brand-claim defender
+      - journalism-defensibility minded
+      - allergic to marketing-grade carbon claims
+
+  # --- Slice 2: Carbon accounting + reporting ---
+  - name: "Anya Volkov"
+    age: 36
+    occupation: "Carbon Accountant at multinational"
+    background: >
+      Senior carbon accountant inside the corporate controllership of a
+      $40B multinational chemicals firm. Owns the GHG Protocol
+      Corporate Standard inventory across roughly 220 facilities,
+      reconciles plant-level energy data against utility invoices, and
+      defends every emission factor choice to the assurance team in
+      the audit walkthrough. Mid-evaluation between Persefoni, Watershed,
+      and Sweep — what she actually cares about is which platform lets
+      her trace a single tCO2e number back to the underlying activity
+      data without four screen-shares. Treats greenwashed marketing as
+      a tell that the vendor does not understand the audit.
+    personality_traits:
+      - GHG-Protocol-pedantic
+      - audit-walkthrough-driven
+      - factor-library curator
+      - traceability-obsessed
+      - greenwashing detector — can name the giveaways
+
+  - name: "Mateo Ferreira"
+    age: 29
+    occupation: "Climate Data Analyst at industrial firm"
+    background: >
+      Two years into the carbon team at a 12,000-person industrial
+      services firm. Spends his weeks ingesting utility invoices,
+      cleaning fuel-card data, mapping plant meters to legal entities,
+      and arguing with the IT team for read access to one more SAP
+      module. The fancy parts of carbon accounting — target-setting,
+      board narratives — happen above him; he is the reason the
+      numbers exist. Wants tooling that reduces the data-quality grind
+      and exposes lineage so he can defend a number when a controller
+      asks why this quarter looks different from last.
+    personality_traits:
+      - data-pipeline grinder
+      - lineage-first
+      - SAP-module integrator
+      - quietly skeptical of executive carbon stories
+      - prefers scripts to UIs
+
+  - name: "Margaret Eze-Hollander"
+    age: 43
+    occupation: "ESG Reporting Lead at REIT"
+    background: >
+      Heads ESG reporting at a publicly-listed REIT with an 18M-square-foot
+      portfolio of office and industrial assets. Her cycle is dictated by
+      GRESB submission season and the SEC climate disclosure rule rollout;
+      her data dependencies are tenant-supplied energy invoices, building-
+      management-system exports, and a property-management software
+      integration that breaks twice a year. Negotiates with asset managers
+      over whose responsibility it is when a tenant refuses to share
+      utility data, and treats every vendor demo through the lens of
+      "does this make my GRESB submission less painful, yes or no."
+    personality_traits:
+      - GRESB-cycle-driven
+      - tenant-engagement diplomat
+      - building-data integrator
+      - SEC-rule-tracking
+      - rejects vendor copy that conflates ESG and carbon
+
+  # --- Slice 3: Energy + ops + facilities ---
+  - name: "Dr. Renata Olsson"
+    age: 47
+    occupation: "Director of Energy Management at hospital system"
+    background: >
+      Owns energy strategy for a six-hospital nonprofit health system in
+      the Midwest, a roughly 4M-square-foot estate with 24/7 critical
+      load. Runs three active virtual power purchase agreements, a
+      demand-response participation program, and a small microgrid pilot
+      at the flagship campus. Reliability is non-negotiable — a chiller
+      that fails during a heat event is a patient-safety event, not a
+      utility-bill event. Open to decarbonization tech that can prove it
+      will not compromise uptime; suspicious of vendors whose case
+      studies all involve office buildings.
+    personality_traits:
+      - reliability-over-savings
+      - PPA-fluent
+      - demand-response operator
+      - patient-safety-framed
+      - skeptical of office-building case studies
+
+  - name: "Kwame Ansah"
+    age: 38
+    occupation: "Facilities Lead at university campus"
+    background: >
+      Runs facilities operations for a 22,000-student public university
+      with 140 buildings, a central steam plant on borrowed time, and a
+      board that has committed to a 2040 net-zero campus pledge. Day-to-
+      day is HVAC retrofits, an EV-charging rollout that has tripled in
+      scope mid-project, and the procurement office's red-tape on every
+      capital request over $50k. Wants tooling that survives a
+      state-procurement RFP cycle and integrates with the university's
+      existing CMMS — not a slick startup product whose security
+      questionnaire he will personally have to fill out.
+    personality_traits:
+      - procurement-cycle realist
+      - CMMS-integration minded
+      - capital-planning constrained
+      - vendor-questionnaire-fatigued
+      - net-zero-pledge defender
+
+  - name: "Brigit Sørensen"
+    age: 45
+    occupation: "Plant Manager at chemicals manufacturer"
+    background: >
+      Runs a 600-person specialty chemicals plant in the Gulf Coast
+      region with a 30-year-old steam-cracker lineage and an aggressive
+      energy-intensity target from corporate. Chasing electrification
+      feasibility on three process lines, weighing the IRA 45V hydrogen
+      production credit against the cost of capital for the boiler
+      retrofit, and translating corporate sustainability slogans into
+      maintenance-shutdown line items. Her test for any climate vendor:
+      can the system survive a process-safety review and an
+      OSHA inspector who has never heard of carbon accounting.
+    personality_traits:
+      - process-safety-first
+      - capex-modeling fluent
+      - IRA-credit aware
+      - allergic to corporate climate slogans
+      - field-engineer pragmatist
+
+  # --- Slice 4: Supply chain + buyers + investors ---
+  - name: "Yusra Bensaïd"
+    age: 35
+    occupation: "Sustainable Procurement Lead at retailer"
+    background: >
+      Sits inside the procurement function at a $14B multinational
+      retailer with a 6,000-supplier tier-1 footprint. Owns the supplier
+      sustainability scorecard, the EcoVadis rollout to private-label
+      manufacturers, and the Scope 3 category-1 hotspot analysis that
+      informs contract-negotiation talking points. Knows her suppliers
+      are EcoVadis-fatigued and that another data request without a
+      commercial reward will get her ignored. Wants tooling that turns
+      supplier emissions data into negotiation leverage rather than
+      another disclosure burden — and is allergic to vendors who pitch
+      her on "engaging" suppliers without naming the trade.
+    personality_traits:
+      - supplier-leverage-minded
+      - EcoVadis-rollout fatigued
+      - Scope-3-hotspot driven
+      - negotiation-table framed
+      - allergic to "engagement" without commercial trade
+
+  - name: "Alistair Donoghue"
+    age: 42
+    occupation: "Climate-Tech VC investor"
+    background: >
+      Partner at a $400M climate-tech-focused early-stage fund.
+      Diligences fifteen to twenty seed and Series A companies a quarter
+      across grid software, industrial decarbonization, and carbon-
+      removal hardware. Treats founder backgrounding and technical
+      depth as the two filters that survive the room — a polished
+      pitch deck means nothing if the founder cannot defend a unit
+      economics question against a chemical engineer on his bench.
+      Reflex-allergic to greenwashing in the portfolio: the fund's LPs
+      include sovereign wealth and a foundation whose press team will
+      not tolerate one bad headline.
+    personality_traits:
+      - technical-depth filter
+      - LP-reputation conscious
+      - founder-backgrounding reflexive
+      - rejects greenwashing on sight
+      - unit-economics interrogator
+
+  - name: "Linnea Whitethorne"
+    age: 40
+    occupation: "Director of Decarbonization Strategy at logistics co"
+    background: >
+      Reports to the Chief Operating Officer at a $9B third-party
+      logistics company with a 14,000-tractor fleet and a customer base
+      that increasingly asks for primary emissions data on every
+      shipment. Owns the fleet electrification roadmap, the SAF (sustainable
+      aviation fuel) procurement strategy for the air-freight book, and
+      the customer-disclosure response process when a Fortune 500
+      shipper sends a Scope 3 supplier survey. Skeptical of vendor
+      claims that out-run the chemistry — she can recite SAF supply
+      curves from memory — and will walk out of any meeting that
+      cannot tie a recommendation back to load-factor or per-mile cost.
+    personality_traits:
+      - fleet-electrification economist
+      - SAF-supply-curve fluent
+      - customer-disclosure responder
+      - per-mile-cost framed
+      - allergic to chemistry-light vendor claims
