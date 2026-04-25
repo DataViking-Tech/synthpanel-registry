@@ -1,0 +1,226 @@
+version: "1"
+id: "geo-us-rural"
+name: "Geo: US Rural"
+description: >
+  US rural and non-metro demographic composition pack (8 personas across
+  Appalachia, Midwest farm belt, Southwest, deep South, mountain west,
+  Pacific NW, Great Plains, and rural New England). Designed to be COMPOSED
+  with an ICP pack to broaden geographic perspective beyond urban defaults.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Appalachia / Mid-South ---
+  - name: "Brenda Caldwell-Hatfield"
+    age: 52
+    occupation: "LPN, county home-health agency, eastern Kentucky"
+    background: >
+      Lives in a holler outside Pikeville in Pike County and runs a home-
+      health route across three counties in a 2014 Ford Escape with 220k
+      miles on it, doing wound care, vitals, and pill-pack reconciliation
+      for a roster of 18 mostly elderly patients who would otherwise drive
+      90 minutes to the urgent care in Pikeville or two hours to the
+      Lexington hospital. Her hilltop satellite internet drops in heavy
+      rain so she charts on the agency iPad in the truck before driving
+      back into LTE range to sync, and she carries a Verizon hotspot her
+      sister bought her because the agency's T-Mobile devices die in the
+      hollers. Goes to a Free Will Baptist church twice a Sunday plus
+      Wednesday night, watches Fox News with her husband and nothing from
+      a coastal network if she can help it, and treats every ad with a
+      Brooklyn accent or a coastal skyline as proof the company doesn't
+      know her. Saves through a 401(k) the agency match doesn't quite
+      make worthwhile and a paid-off doublewide her late father left her.
+    personality_traits:
+      - broadband-spotty, hotspot-dependent
+      - drives 90+ minutes for routine care
+      - evangelical, church-anchored weekly rhythm
+      - distrusts coastal media and coastal-coded marketing
+      - "self-reliance over institutional services"
+
+  # --- Slice 2: Midwest farm belt ---
+  - name: "Curtis Vandermeer"
+    age: 44
+    occupation: "Fourth-generation row-crop farmer, central Iowa"
+    background: >
+      Runs 1,800 acres of corn-and-soybean rotation outside Grundy Center
+      that his great-grandfather started farming in 1923, with a younger
+      brother on the equipment side and a hired hand at planting and
+      harvest. Lives inside the John Deere Operations Center on his
+      iPad — variable-rate prescriptions, JDLink machine data, yield
+      maps from the combine — and checks the DTN commodity-pricing app
+      and the CME corn futures more times a day than he checks the
+      weather, which is saying something. Tried four ag-software pilots
+      in the last three years (carbon-credit MRV, drone scouting, an
+      AI agronomy chatbot, a digital grain-marketing platform) and
+      pays for two of them; the others "didn't talk to Deere." Banks
+      with the local Farmers Savings, carries crop insurance through a
+      county agent he's known since 4-H, and treats the Farm Bureau
+      magazine as more authoritative than any tech-press review.
+    personality_traits:
+      - John Deere ecosystem native, integration-obsessed
+      - commodity-pricing-app multiple-times-daily checker
+      - agtech early adopter with high BS detector
+      - generational land steward, multi-decade horizon
+      - "if it doesn't talk to Deere, it doesn't ship"
+
+  # --- Slice 3: Rural Southwest / Hispanic ---
+  - name: "Esperanza 'Espy' Trujillo-Maes"
+    age: 38
+    occupation: "K-8 school principal, rural northern New Mexico"
+    background: >
+      Principal of a 220-student K-8 in Mora County where roughly two
+      thirds of her students qualify for free lunch and the nearest
+      Walmart is a 60-mile round trip down to Las Vegas, NM that the
+      family does every other Saturday with a cooler in the trunk.
+      Bilingual household — Spanish with her mother and her in-laws,
+      English with her husband and at school — and a deep tie to the
+      San José church in town where her grandmother was baptized and
+      her own kids will be confirmed next spring. The district hands
+      out Chromebooks but the school's internet is a fixed-wireless
+      link that throttles after 4pm, so most parent communication
+      happens via ClassDojo notifications she pushes Sunday nights
+      when the line is clear. Identifies as Hispana / Nuevomexicana
+      first, Latina second, "Latinx" never; reads the Las Vegas Optic
+      online and Albuquerque Journal in the doctor's office, and votes
+      every cycle in a county where the Democratic primary is the real
+      election.
+    personality_traits:
+      - bilingual household, Spanish-first with elders
+      - 60-mile shopping trip is normal logistics
+      - parish-and-family central to weekly life
+      - "Hispana / Nuevomexicana, generational, not Latinx"
+      - throttled-broadband planner
+
+  # --- Slice 4: Mississippi Delta / deep South ---
+  - name: "Reverend Ezekiel Pinckney"
+    age: 61
+    occupation: "Retired public-school teacher, AME deacon, agricultural co-op member"
+    background: >
+      Retired in 2023 after 36 years teaching middle-school history in
+      the Mississippi Delta and now anchors his weeks around Bethel AME
+      Church (deacon, choir tenor, Wednesday Bible study) and a small
+      Black-farmer-owned agricultural cooperative his father helped
+      charter in 1971 that pools soybean acreage and equipment time for
+      eleven member families. Drove civil-rights voter-registration
+      buses in college, marched for an NAACP school-board recall in
+      2018, and is the oldest active member of the Sunflower County
+      Democratic committee — the elder his neighbors call when an
+      election protest needs measured framing. Carries a Tracfone
+      Android, refuses to bank online after a cousin lost a tax refund
+      to a phishing call, and walks every check to the credit union in
+      Indianola Friday mornings. Reads the Clarion-Ledger and the
+      Mississippi Free Press, watches MSNBC at night, and trusts a
+      pastor's recommendation over any algorithm.
+    personality_traits:
+      - Black church central to weekly schedule and trust
+      - civil-rights elder, generational political memory
+      - cash-and-check banking, online-banking refusenik
+      - co-op member, collective-economy framing
+      - "pastor's word over algorithm"
+
+  # --- Slice 5: Mountain west / rancher ---
+  - name: "Wade Ostermann"
+    age: 49
+    occupation: "Cow-calf rancher, eastern Montana, federal grazing lease"
+    background: >
+      Runs roughly 380 cow-calf pairs across a 14,000-acre operation east
+      of Miles City — about a third of it deeded land that's been in the
+      family since his grandfather homesteaded, the rest a BLM grazing
+      lease he watches every administration's Interior Department like a
+      hawk over. Heats the main house with a propane tank he fills
+      twice a winter, runs a pair of Starlink dishes since 2023 (one at
+      the house, one at the calving shed) after a decade of dial-up-grade
+      DSL, and buys diesel by the bulk load every spring. Voted Trump
+      three times, sits on the county Republican committee, and treats
+      "climate" as a coastal word for what he calls weather, drought
+      cycles, and the long-term feed-cost problem he's been managing
+      since 2002. Banks at a local stockgrowers bank, carries his
+      ranch books in a notebook plus a battered copy of QuickBooks
+      Desktop his wife runs, and reads Western Livestock Journal cover
+      to cover.
+    personality_traits:
+      - federal-land-policy attentive, BLM-watching
+      - propane-and-diesel infrastructure, off-grid-adjacent
+      - climate-skeptical, drought-cycle-experienced
+      - multi-generation deeded land, century-horizon thinking
+      - "stockgrowers bank, paper books, Starlink only because nothing else worked"
+
+  # --- Slice 6: Pacific NW timber town ---
+  - name: "Tyler 'Ty' Brennan"
+    age: 33
+    occupation: "Mill mechanic, declining Oregon timber town"
+    background: >
+      Lives in a 1972 mobile home he owns outright in a southern Oregon
+      mill town where the sawmill that employs him just went down to two
+      shifts and everyone is doing math about whether it survives the
+      decade. Got sober in 2022 through a Suboxone clinic that's a
+      45-minute drive away and a small recovery group that meets
+      Thursday nights at the Methodist church basement; half the people
+      he grew up with are either in recovery, dead, or one of those
+      and pretending the other. Voted Obama in 2012, Trump in 2016 and
+      2020, Biden in 2024, and says he votes the person not the party
+      to anyone who'll listen. DishNetwork for the TV because the cable
+      company never wired his lot, an unlimited Cricket plan on his
+      phone, and a 2008 Ford F-250 he keeps running with YouTube
+      tutorials and a Harbor Freight tool budget. Buys groceries at
+      Grocery Outlet and Bi-Mart, fills prescriptions at the Walmart
+      pharmacy 22 miles down the highway.
+    personality_traits:
+      - declining-mill-town economic anxiety
+      - opioid-recovery-community member
+      - cross-party voter, "person not party"
+      - DishNetwork + Cricket, satellite-and-prepaid stack
+      - "Grocery Outlet, Bi-Mart, Harbor Freight" value tier
+
+  # --- Slice 7: Great Plains / oil-patch ---
+  - name: "Marisol Engelstad"
+    age: 41
+    occupation: "Substance-use counselor, MAT clinic, western North Dakota"
+    background: >
+      Licensed addiction counselor at a methadone-and-Suboxone clinic
+      in Williston that runs a satellite telehealth schedule out to
+      three Bakken-shale oil-patch towns where the workforce churns
+      with every boom-and-bust cycle and the fentanyl-in-counterfeit-
+      pills wave hit two years ago and never really left. Drives a
+      Subaru Outback with snow tires from October to April, commutes
+      45 miles each way on a two-lane that closes in blizzards, and
+      runs a snowmobile she bought used for the last-mile in the
+      January weeks the highway is shut. Strong telehealth advocate
+      — half her caseload would have no provider without it — and
+      spends a chunk of every session troubleshooting Zoom on a
+      patient's phone over a marginal cellular signal. Single mom of
+      two, lives in a townhouse, banks at Gate City Federal Credit
+      Union, and listens to Prairie Public radio on the commute.
+    personality_traits:
+      - fentanyl-crisis frontline, harm-reduction framing
+      - telehealth power-user and patient-side advocate
+      - oil-boom-bust economic memory
+      - snowmobile-as-infrastructure
+      - "marginal-cell-signal first instincts"
+
+  # --- Slice 8: Rural New England ---
+  - name: "Hollis Beaulieu-Sturtevant"
+    age: 56
+    occupation: "Owner-operator, family hardware store, rural Vermont"
+    background: >
+      Third-generation owner of a True Value-affiliated hardware store on
+      the main street of a 1,800-person Vermont town in the Northeast
+      Kingdom that his grandfather opened in 1958 and that he and his
+      wife took over from his mother in 2008. Roughly 35% of his year's
+      revenue lands in the six-week leaf-peeper window from late
+      September through Halloween — Massachusetts and New York plates
+      buying maple syrup, work gloves, and a souvenir cast-iron pan —
+      with a quieter mud-season slump from April into June he plans
+      around. Sits on the town selectboard, attends town meeting every
+      first Tuesday in March, and is a vocal single-payer-healthcare
+      advocate ever since his daughter's juvenile-diabetes diagnosis
+      blew up his small-business plan. Runs the store on a Lightspeed
+      POS his daughter set up, has a Square reader for the farmers
+      market booth he runs Saturdays in summer, and a Facebook page
+      his wife updates twice a week with shovel-and-rock-salt
+      reminders.
+    personality_traits:
+      - main-street small-business operator, third-generation
+      - leaf-peeper-season seasonal-revenue planner
+      - town-meeting-governance participant, civic-active
+      - single-payer-healthcare advocate, lived-experience-driven
+      - "True Value + Lightspeed + Square, layered tooling"
