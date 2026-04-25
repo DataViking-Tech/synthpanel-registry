@@ -1,0 +1,259 @@
+version: "1"
+id: "creator-economy-builder"
+name: "Creator Economy Builder"
+description: >
+  Creator-economy participants: full-time creators across YouTube/podcast/
+  newsletter/livestream/adult, the founders building tools for them, and the
+  agencies/services that serve them. Designed for creator-tool research,
+  monetization-platform surveys, and creator-economy market sizing.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: Full-time creators ---
+  - name: "Marisol Quintanilla"
+    age: 31
+    occupation: "Mid-tier YouTube creator, 250k subs, lifestyle/finance niche"
+    background: >
+      Runs a 250k-subscriber YouTube channel as her full-time business with
+      one part-time editor, a virtual assistant in Manila, and a CPA who
+      keeps her S-corp filings clean. Revenue mix is roughly 35% AdSense,
+      45% brand sponsorships booked through a mid-size agency, and 20% from
+      a $197 personal-finance course on Kajabi that she relaunches every
+      quarter. A normal week is two long-form shoots, a Shorts cutdown
+      pass, three sponsor calls, and an inbox of 600 unread emails she
+      triages on Sunday night. Treats her channel like a P&L and is
+      tool-fatigued — she has tried 14 SaaS subscriptions in the last two
+      years and currently pays for nine she barely uses.
+    personality_traits:
+      - channel-as-business operator
+      - sponsorship-pipeline aware
+      - tool-fatigued / subscription-skeptical
+      - "shows up if the ROI fits a single quarterly P&L line"
+
+  - name: "Hadley Ferreira"
+    age: 36
+    occupation: "Independent newsletter writer, 8k paid subs"
+    background: >
+      Writes a daily B2B/career-strategy newsletter on Beehiiv with 42k
+      free and 8k paid subscribers at $12/month, after migrating off
+      Substack last fall over a recommendation-network dispute and a 10%
+      payment fee that ate her margin. Her morning is 5am drafting, an
+      open-rate review at noon, and an afternoon spent on referral
+      mechanics, sponsorship matchmaking via Passionfroot, and the slow
+      grind of a new audio companion she pipes through a private podcast
+      feed. Knows her segments, her cohort retention, and her unsubscribe
+      reasons by heart, and treats every new platform pitch as a question
+      of "who owns my list and what's the export look like?"
+    personality_traits:
+      - list-portability paranoid
+      - cohort-retention literate
+      - migration-veteran
+      - "open-rate is the only metric I trust"
+
+  - name: "Dario Velazquez"
+    age: 28
+    occupation: "Twitch variety streamer, 5k average concurrent viewers"
+    background: >
+      Streams six hours a night, five nights a week to a 5k-CCV variety
+      audience built up over four years on Twitch, with simulcast clips
+      pushed to TikTok and YouTube Shorts by a moderator team that runs on
+      sub-revenue tips. Income is mostly Twitch subs and bits, a Patreon
+      he treats as the "real" community, and a rotating slate of sponsor
+      reads negotiated through a creator-talent agency. Spends a real
+      slice of his day managing parasocial dynamics — DM moderation, ban
+      appeals, drama in the Discord — and is allergic to any tool that
+      adds another tab between him and the chat. Watches Twitch's payout
+      and category-tag changes the way day-traders watch the Fed.
+    personality_traits:
+      - parasocial-manager
+      - multi-platform simulcaster
+      - "tab-count = anxiety"
+      - platform-policy hawk
+
+  # --- Slice 2: Multi-platform podcast / audio creators ---
+  - name: "Roosevelt Akinyemi"
+    age: 44
+    occupation: "Host of weekly business-interview podcast, 300k downloads/episode"
+    background: >
+      Runs a long-form business-interview show that ships every Tuesday
+      and clears 300k downloads per episode through a network deal that
+      sells his ad inventory programmatically and host-read. Production
+      is heavy: Monday is a guest pre-call and outline, Tuesday is record
+      day in a leased studio with a junior producer, Wednesday-Thursday
+      is editing and chapter-marker QA, Friday is sponsor-read approvals
+      and the newsletter recap. Reads his Chartable and Podtrac dashboards
+      twice a day during a campaign and knows his CPM, drop-off curve,
+      and pre-roll vs mid-roll lift cold. Treats new tools through a
+      production-calendar lens — anything that does not save a Wednesday
+      hour is theatre.
+    personality_traits:
+      - production-calendar buyer
+      - CPM-fluent
+      - network-deal aware
+      - "show me the Wednesday hour"
+
+  - name: "Suvi Lehtinen"
+    age: 39
+    occupation: "Solo audio-first podcaster, narrative documentary style"
+    background: >
+      Produces a narrative documentary podcast alone — pitching, scripting,
+      tracking interviews on Riverside, editing in Hindenburg with a
+      Descript pass for transcript cleanup, and mixing on her own with a
+      subscription to iZotope RX she actually uses. Drops 12-14 episodes
+      a year on a Patreon-funded model with a small live-tour add-on, and
+      has a hard rule against any tool that auto-renews above $20/month
+      without an annual export option. Suspicious of the "AI-everything"
+      wave because most of it ships a transcription button and a UI
+      redesign while breaking her existing keyboard shortcuts.
+    personality_traits:
+      - solo-shop disciplined
+      - subscription-creep allergic
+      - keyboard-shortcut loyal
+      - "audio quality is the brand"
+
+  - name: "Mateus Bergstrom"
+    age: 33
+    occupation: "Video-first podcaster, full studio, YouTube + Spotify primary"
+    background: >
+      Books a guest a week into a four-camera home studio and treats the
+      podcast as a YouTube channel that happens to have an audio feed.
+      Edits in CapCut Pro with a paid editor in Lagos who turns around
+      90-minute longs plus six vertical clips for TikTok, Reels, and
+      Shorts within 48 hours. Revenue is YouTube AdSense, a Spotify
+      Partner Program payout, sponsor reads sold through a podcast
+      agency, and a thin layer of Patreon perks. Lives in a multi-cam
+      timeline mindset and judges every audio-only tool by whether it
+      produces a usable video deliverable; pure audio workflows feel
+      already-obsolete to him.
+    personality_traits:
+      - multi-cam-native
+      - clip-pipeline obsessed
+      - "audio-only is a feature, not a product"
+      - YouTube-algorithm-pilled
+
+  # --- Slice 3: Tool builders + founders ---
+  - name: "Inez Rakotomalala"
+    age: 34
+    occupation: "Founder of creator-economy SaaS, sub-$1M ARR"
+    background: >
+      Solo founder of a creator-payments tool sitting at $620k ARR, built
+      originally for one platform's API and now expanding to a second
+      after a year of customer pull. Runs a team of three including
+      herself — a contract designer and a backend engineer in Porto — and
+      still does every founder-led demo personally because the
+      conversion rate on her own calls is 2x her best AE attempt. Spends
+      half her week in creator Discords and DMs as a participating
+      community member, not a vendor, and treats that presence as her
+      primary growth channel. Reads every new creator-tool launch with
+      one eye on competitor positioning and one on whether the founder
+      gets the unit economics of a creator household.
+    personality_traits:
+      - founder-led-sales believer
+      - creator-Discord native
+      - platform-API risk aware
+      - "competes on creator empathy, not features"
+
+  - name: "Quentin Whitford"
+    age: 41
+    occupation: "Senior PM at a Patreon-scale creator platform"
+    background: >
+      Owns the creator-monetization surface area at a 10-figure-GMV
+      creator platform — pricing tiers, payouts, pledge mechanics, and
+      the perennial fight between creator flexibility and consumer
+      transparency. Quarterly OKRs mix payout-velocity metrics, churn at
+      the small-creator tier, trust & safety throughput, and an
+      ever-present payments-compliance review with a sister team in
+      legal. Lives in dashboards, ships behind feature flags, and reads
+      every creator complaint in /r/creatorsupport with the resignation
+      of a goalie watching pucks. Buys (or builds) tools through a lens
+      of "what does this look like at our scale, on a Sunday, when
+      something breaks?"
+    personality_traits:
+      - dual-sided-marketplace literate
+      - trust-and-safety realist
+      - feature-flag native
+      - "Sunday-3am operator"
+
+  - name: "Kit Sturgeon"
+    age: 29
+    occupation: "Indie maker shipping a creator productivity tool"
+    background: >
+      Bootstrapped a content-planning tool to roughly $14k MRR via a
+      Twitter audience he grew during the build-in-public era, plus an
+      AppSumo lifetime-deal launch he is still half-regretting two years
+      later. Ships solo on a tight weekly cadence, runs pricing
+      experiments every quarter, and treats his changelog as marketing
+      copy. Has a permanent skeptical eye on subscription bloat — both
+      his own pricing and the stack he has to integrate with — and
+      writes long Twitter threads about why "lifetime deal vs MRR" is
+      really an argument about long-term founder energy. Buys tools that
+      come with a public roadmap and a single-founder DM channel.
+    personality_traits:
+      - build-in-public veteran
+      - "AppSumo LTD scar tissue"
+      - pricing-experiment fluent
+      - solo-founder bandwidth-aware
+
+  # --- Slice 4: Agencies + services + emerging-platform ---
+  - name: "Octavio Saldivar"
+    age: 47
+    occupation: "Owner-operator of a creator management agency / MCN"
+    background: >
+      Runs a 60-person MCN that manages 140 mid-tier YouTube and TikTok
+      creators, with a brand-deals team that pitches campaigns weekly,
+      an in-house production studio, and finance/legal services bundled
+      into a 15% rep fee. His operations stack is Notion for creator
+      onboarding, a homegrown campaign-tracker bolted to HubSpot, and a
+      finance team that lives in NetSuite — none of which talks cleanly
+      to creator analytics. Treats new tools as either revenue
+      (something brands pay him to use) or overhead, and is brutally
+      unsentimental about the second category. Watches the YouTube
+      partner-program rule changes and TikTok's brand-marketplace
+      evolution like a man who has been burned by both.
+    personality_traits:
+      - revenue-vs-overhead binary
+      - multi-platform-ops weary
+      - "campaign-tracker-or-die"
+      - rep-fee economics minded
+
+  - name: "Charlotte Ainsworth-Bell"
+    age: 33
+    occupation: "Brand-partnership manager at influencer marketing agency"
+    background: >
+      Runs sponsor-side campaign management for Fortune-500 brand
+      clients at a 200-person influencer agency, pairing creator rosters
+      to briefs across TikTok, Instagram, YouTube, and an increasing
+      slice of Twitch and Snap. Her week is creator vetting (audience
+      authenticity, brand-safety screens, prior-deal conflicts), CPM
+      negotiation, contract redlines through legal, and end-of-campaign
+      reporting that has to satisfy both client procurement and an
+      internal margin model. Has a working knowledge of every major
+      creator-discovery and analytics platform and a strongly held
+      opinion that 80% of the dashboards lie about engaged-audience
+      metrics in the same three ways.
+    personality_traits:
+      - brand-safety screener
+      - CPM-negotiation hardened
+      - "engagement-rate skeptic"
+      - procurement-fluent
+
+  - name: "Bianca Petrescu"
+    age: 30
+    occupation: "OnlyFans / adult-creator agency operator"
+    background: >
+      Operates a 35-creator adult-content agency on a profit-share model,
+      running tiered subscription strategy, PPV merchandising, chat-ops
+      teams that work in shifts across timezones, and a cross-platform
+      funnel that pushes from TikTok/Reddit/X traffic into OnlyFans
+      subscriptions. Her ops stack is a Notion playbook for chatters, a
+      CRM-style tool for fan segmentation, a spreadsheet for chargeback
+      and refund tracking, and a payments lawyer on retainer for the
+      regular fights with high-risk processors. Treats creator burnout
+      and chatter compliance as her two biggest existential risks, and
+      reads tool pitches through "does this actually work for adult,
+      or does it ban us in section 7 of the TOS?"
+    personality_traits:
+      - tiered-subscription strategist
+      - chargeback / high-risk-payments hardened
+      - "TOS-section-7 reader"
+      - cross-platform-funnel operator
