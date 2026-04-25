@@ -1,0 +1,258 @@
+version: "1"
+id: "legaltech-buyer"
+name: "Legaltech Buyer"
+description: >
+  Legaltech buyers and users across BigLaw, mid-size firms, in-house legal
+  departments, and legal operations. Covers contract lifecycle, e-discovery,
+  IP, GC roles, and legal-AI evaluation. Designed for legaltech product
+  research, contract-tool surveys, and legal-AI buying studies.
+author: "DataViking-Tech"
+
+personas:
+  # --- Slice 1: In-house counsel + GC ---
+  - name: "Marisol Acevedo-Pérez"
+    age: 41
+    occupation: "General Counsel at Series-C SaaS company"
+    background: >
+      Solo GC at a 320-person Series-C SaaS company, hired eighteen months
+      ago to replace a fractional law firm that was burning $90K a month on
+      commercial review. Her queue is a never-ending stack of MNDAs,
+      enterprise MSAs with 80-page security exhibits, and procurement
+      questionnaires from Fortune 500 prospects, and she is the only
+      attorney in the building. The CEO wants her to "get out of the way of
+      sales" while the CFO wants outside-counsel spend cut another 30%, and
+      she has neither the headcount nor the appetite to grow legal beyond
+      one paralegal. Evaluates legal-AI tools as headcount substitutes, not
+      productivity boosters — if it doesn't credibly replace a $250-an-hour
+      associate hour, she will not pay for it.
+    personality_traits:
+      - solo-GC overwhelmed
+      - sales-velocity pressured
+      - outside-counsel-spend allergic
+      - "AI-as-headcount-substitute buyer"
+
+  - name: "Jonathan Whitfield"
+    age: 38
+    occupation: "Senior commercial counsel at enterprise SaaS"
+    background: >
+      Number-three lawyer on a six-person legal team at a public enterprise
+      SaaS company, owns the commercial desk for North America deals over
+      $500K. His week is DPA negotiations, redlines on every renewal, and
+      the security-questionnaire backbone with InfoSec — he has memorized
+      the differences between the standard EU SCCs and every customer's
+      one-off addendum. The team uses Ironclad for CLM, an in-house
+      playbook in Notion, and a love-hate relationship with a redlining-AI
+      pilot that the GC keeps threatening to kill. Will champion any tool
+      that survives a real Microsoft or J&J redline; ignores anything
+      demoed only on toy NDAs.
+    personality_traits:
+      - DPA-and-SCC fluent
+      - redline-tested skeptic
+      - playbook-driven negotiator
+      - "demo-on-real-paper-or-leave"
+
+  - name: "Yvette Castellanos"
+    age: 47
+    occupation: "Director of legal operations at Fortune 500 retailer"
+    background: >
+      Runs legal ops for a $40B retailer's 70-attorney legal department,
+      reporting into the CLO with a dotted line to the CFO on outside-
+      counsel spend. Owns vendor consolidation across CLM, e-billing,
+      matter management, and the on-again-off-again AI-tool pilot
+      portfolio — currently running three legal-AI pilots against control
+      arms, with quarterly readouts to the finance leadership team. The
+      department's outside-counsel panel got cut from 140 firms to 38 last
+      year on her recommendation, and the next savings target is internal
+      tooling. Buys on a three-year TCO model with explicit deprecation
+      criteria for incumbent tools.
+    personality_traits:
+      - vendor-consolidation hawk
+      - pilot-portfolio operator
+      - TCO-modeling buyer
+      - CFO-readable on one slide
+
+  # --- Slice 2: BigLaw + mid-firm attorneys ---
+  - name: "Priscilla Tomlinson"
+    age: 33
+    occupation: "M&A associate at AmLaw 100 firm"
+    background: >
+      Fifth-year corporate associate in the M&A group of an AmLaw 50 firm,
+      billing 2,200 hours a year on mid-market private-equity deals.
+      Lives in virtual data rooms — most weeks she is staffed across two
+      live deals and a sell-side prep, with junior associates triaging
+      diligence into a contract-review platform that the firm rolled out
+      last year. Compensation is lockstep through senior associate, but
+      bonus and partnership track depend on origination credit she can't
+      yet generate, so efficiency tools are personally double-edged: every
+      hour an AI saves is an hour she can't bill. Adopts AI tools when
+      partners assign them, resists when they threaten her hours model.
+    personality_traits:
+      - "data-room native"
+      - billable-hour conflicted
+      - partner-direction-driven
+      - diligence-at-scale operator
+
+  - name: "Eamon Fitzgerald"
+    age: 54
+    occupation: "IP litigation partner at boutique firm"
+    background: >
+      Name partner at a 28-attorney IP litigation boutique handling
+      patent-infringement cases for tech and life-sciences clients,
+      typically opposite AmLaw 100 defense teams with 10x his headcount.
+      His firm wins by leveraging document-review platforms (Relativity,
+      Reveal) aggressively and by knowing the local rules in EDTX, NDCA,
+      and the ITC cold. Owns the e-discovery vendor relationships
+      personally and has pricing power because his case mix produces
+      predictable annual review volume. Evaluates tools through the lens of
+      "does this hold up at a Daubert hearing?" — junk-science AI
+      that can't be explained to a federal judge is dead on arrival.
+    personality_traits:
+      - "e-discovery-platform power-user"
+      - Daubert-hearing-defensive
+      - vendor-pricing leverage
+      - federal-court-explainable bar
+
+  - name: "Beatrix Lindqvist"
+    age: 49
+    occupation: "Mid-firm corporate partner"
+    background: >
+      Equity partner at a 95-attorney regional firm covering the upper
+      Midwest, runs a corporate practice serving family-owned and
+      lower-middle-market companies on M&A, financings, and general
+      commercial work. Her clients can't afford BigLaw and won't tolerate
+      hourly rates above $650, so margin comes from leverage and the
+      firm's tech stack — currently iManage for DMS, a homegrown precedent
+      library, and an ongoing CLM evaluation for her three largest
+      recurring clients. The firm's tech committee meets quarterly and
+      buys on five-year payback; she is the loudest voice for "buy what
+      BigLaw uses, two versions behind, at one-quarter the price."
+    personality_traits:
+      - leverage-and-precedent driven
+      - mid-market-pricing disciplined
+      - "BigLaw-minus-two-versions buyer"
+      - committee-decision realist
+
+  # --- Slice 3: Specialty + transactional ---
+  - name: "Roy Halberstam"
+    age: 58
+    occupation: "Real-estate transactional attorney, solo practice"
+    background: >
+      Solo practitioner closing 150-200 commercial and residential real
+      estate transactions a year out of a strip-mall office in central New
+      Jersey. His tech stack is a Windows desktop, a shared title-software
+      install (SoftPro) that talks to one of three underwriters, a fax
+      machine that genuinely still rings, and a paralegal who has been
+      with him for 22 years. County-level recording quirks and
+      idiosyncratic title objections make every deal a snowflake, and he
+      is structurally suspicious of anything cloud-based after watching a
+      colleague get locked out of a transaction by a SaaS billing dispute.
+      Will test new software only if it runs locally, integrates with
+      SoftPro, and can be explained in under five minutes.
+    personality_traits:
+      - cloud-skeptical
+      - "SoftPro-or-nothing"
+      - county-quirk specialist
+      - five-minute-explainability bar
+
+  - name: "Carolina Mendes"
+    age: 42
+    occupation: "Employment law attorney at boutique firm"
+    background: >
+      Partner at a six-attorney employment-law boutique representing
+      employers from 50 to 5,000 employees across all 50 states. Her week
+      is handbook updates triggered by new state laws, advice calls on
+      terminations and accommodations, and litigation-hold workflows when
+      an EEOC charge or wage-and-hour complaint lands. Maintains a
+      proprietary 50-state compliance tracker in Smartsheet that she
+      refreshes quarterly — it is a meaningful chunk of the firm's value
+      proposition. Treats AI tools as research aids that must be
+      double-checked against primary sources; one hallucinated cite at the
+      ALJ level would end the practice's reputation.
+    personality_traits:
+      - "50-state-compliance specialist"
+      - handbook-version-controlled
+      - "primary-source-verifier"
+      - hallucination-existential
+
+  - name: "Tomás Iglesias"
+    age: 46
+    occupation: "Bankruptcy attorney at mid-size firm"
+    background: >
+      Partner running the bankruptcy and restructuring group at a 60-
+      attorney firm, splits his docket between Chapter 11 debtor-side
+      representations for distressed mid-market companies and creditor-
+      committee work. The practice lives or dies on PACER, a court-filing
+      automation tool (Best Case, with a Stretto for noticing), and an
+      Excel-based creditor matrix that has 14 tabs and a macro his
+      paralegal is the only person who understands. DIP-financing models
+      are bespoke per case, often built in Excel from a Bloomberg pull.
+      Buys software when the court mandates it (CM/ECF changes) or when a
+      large case forces it; otherwise the existing stack stays.
+    personality_traits:
+      - PACER-and-CMECF native
+      - creditor-matrix protective
+      - "court-mandated buying"
+      - bespoke-model fluent
+
+  # --- Slice 4: Legal ops + paralegal + tech-forward ---
+  - name: "Saoirse Donnelly"
+    age: 36
+    occupation: "Senior paralegal at AmLaw 50 firm"
+    background: >
+      Senior litigation paralegal in the white-collar group of an AmLaw 50
+      firm, with twelve years of experience and a quiet veto over which
+      review platforms the partners actually use. Owns daily operations
+      across Relativity, Everlaw, and a contract-abstraction AI tool that
+      the firm rolled out for second-request matters; she is the person
+      who designs the search terms, validates the AI's recall, and writes
+      the QC protocol that the associates actually run. Partners ask her
+      whether a new tool is "worth a meeting" before booking the vendor
+      demo, and her answer routinely kills procurement before it starts.
+      Treats AI summary tools as junior-associate replacements, but only
+      when the audit trail survives a court challenge.
+    personality_traits:
+      - "platform-power-user gatekeeper"
+      - QC-protocol owner
+      - audit-trail demanding
+      - "partners-trust-her-veto"
+
+  - name: "Devereaux Whitlock"
+    age: 32
+    occupation: "Legal operations analyst at tech enterprise"
+    background: >
+      Legal-ops analyst on a four-person ops team supporting a 45-attorney
+      in-house department at a mid-cap enterprise software company. His
+      job is the Snowflake instance that holds matter spend, e-billing
+      data, and outside-counsel scorecards — he writes the SQL, builds
+      the Looker dashboards, and runs the quarterly outside-counsel
+      reviews that drive panel decisions. Sees vendor scoring as a data
+      problem, not a relationship one, and has zero patience for tools
+      that will not export raw data to S3 or warehouse natively.
+      Evaluates legal-AI on the same dimensions he evaluates any data
+      tool: schema, latency, lineage, and unit economics per matter.
+    personality_traits:
+      - "warehouse-native"
+      - SQL-fluent legal-ops
+      - export-or-die buyer
+      - data-lineage demanding
+
+  - name: "Margaret Holloway-Sutter"
+    age: 51
+    occupation: "Knowledge management lead at mid-firm"
+    background: >
+      Director of knowledge management at a 250-attorney AmLaw 200 firm,
+      driving the multi-year migration off Iron Mountain physical
+      precedent storage and a legacy KM database into a cloud DMS with an
+      AI-assisted retrieval layer on top. Spent eighteen months
+      negotiating with the partnership over data-residency, conflicts-
+      walling, and which precedents are firm IP versus client work
+      product. Currently piloting two legal-AI retrieval vendors against
+      a control set of partner-curated precedents, with explicit
+      precision/recall thresholds before either gets firm-wide rollout.
+      Buys on whether the vendor can articulate how their model handles
+      ethical walls and outside-counsel-guidelines constraints.
+    personality_traits:
+      - migration-program operator
+      - "ethical-wall-aware"
+      - "precision-recall-threshold buyer"
+      - partnership-political fluent
