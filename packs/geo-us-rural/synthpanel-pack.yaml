@@ -169,7 +169,7 @@ personas:
       - opioid-recovery-community member
       - cross-party voter, "person not party"
       - DishNetwork + Cricket, satellite-and-prepaid stack
-      - "Grocery Outlet, Bi-Mart, Harbor Freight" value tier
+      - 'Grocery Outlet / Bi-Mart / Harbor Freight value tier'
 
   # --- Slice 7: Great Plains / oil-patch ---
   - name: "Marisol Engelstad"
