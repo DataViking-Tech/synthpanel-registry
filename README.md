@@ -28,6 +28,13 @@ There is no runtime here — only JSON, a schema, and a PR workflow.
 See [`schema/default.schema.json`](schema/default.schema.json) for the
 authoritative JSON Schema. Validation runs in CI on every PR.
 
+Each entry may also carry an optional `calibration_count` integer
+summarizing how many calibration runs the pack has declared on its
+`calibration:` list. Packs without calibration runs omit the field —
+"uncalibrated" is a valid state for ICP, vertical, and stress-test packs.
+See [CONTRIBUTING.md → Calibration](CONTRIBUTING.md#calibration) for the
+field convention and JSD interpretation guide.
+
 ## Adding a pack
 
 1. Drop your pack YAML at `packs/<pack-id>/synthpanel-pack.yaml` (one

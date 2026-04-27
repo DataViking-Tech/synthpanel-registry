@@ -101,7 +101,12 @@
         },
         "calibration": {
           "type": "null",
-          "description": "Reserved for future calibration fingerprints. Always null in v1."
+          "description": "Reserved for future calibration fingerprint summaries on the registry entry. Always null in v1; per-pack calibration runs live on the pack YAML's `calibration:` list and are summarized here as `calibration_count`."
+        },
+        "calibration_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional. Number of calibration runs declared on the pack's `calibration:` list. Omitted (or zero) means the pack is uncalibrated, which is a valid state — see CONTRIBUTING.md for which packs should and should not calibrate."
         }
       }
     }

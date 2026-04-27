@@ -20,6 +20,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import datetime as _dt
 import difflib
 import json
 import subprocess
@@ -35,6 +36,12 @@ PACKS_DIR = REPO_ROOT / "packs"
 OUTPUT = REPO_ROOT / "default.json"
 REGISTRY_REPO = "DataViking-Tech/synthpanel-registry"
 SCHEMA_VERSION = 1
+
+CALIBRATION_REQUIRED_FIELDS = ("dataset", "question", "jsd", "n", "calibrated_at")
+# Soft ceiling above which we surface a CI warning. Packs that calibrate poorly
+# are still valid — JSD > 0.5 means "almost orthogonal to the human baseline,"
+# which is worth a sanity check from the author but does not fail the build.
+CALIBRATION_JSD_WARN = 0.5
 
 
 class PackError(ValueError):
@@ -109,6 +116,76 @@ def _normalize_description(raw: Any, pack_name: str) -> str:
     return " ".join(raw.split())
 
 
+def _validate_calibration(raw: Any, pack_id: str) -> list[dict[str, Any]]:
+    """Validate a pack's optional `calibration:` block and return the entries.
+
+    Accepted shapes:
+      * field absent or `null` → uncalibrated, returns []
+      * list of mappings, each carrying at minimum
+        (dataset, question, jsd, n, calibrated_at)
+
+    Raises PackError on malformed entries. Emits a stderr warning (not an
+    error) when an entry's jsd > 0.5 — bad fits are still valid registry
+    entries, but the author probably wants to know.
+    """
+    if raw is None:
+        return []
+    if not isinstance(raw, list):
+        raise PackError(
+            f"{pack_id}: calibration must be a list of run entries (or null/absent)"
+        )
+    out: list[dict[str, Any]] = []
+    for idx, entry in enumerate(raw):
+        if not isinstance(entry, dict):
+            raise PackError(
+                f"{pack_id}: calibration[{idx}] must be a mapping"
+            )
+        missing = [k for k in CALIBRATION_REQUIRED_FIELDS if entry.get(k) in (None, "")]
+        if missing:
+            raise PackError(
+                f"{pack_id}: calibration[{idx}] missing required field(s): "
+                f"{', '.join(missing)}"
+            )
+        jsd_raw = entry["jsd"]
+        if not isinstance(jsd_raw, (int, float)) or isinstance(jsd_raw, bool):
+            raise PackError(
+                f"{pack_id}: calibration[{idx}].jsd must be a number, got {type(jsd_raw).__name__}"
+            )
+        jsd = float(jsd_raw)
+        if not 0.0 <= jsd <= 1.0:
+            raise PackError(
+                f"{pack_id}: calibration[{idx}].jsd must be within [0, 1], got {jsd}"
+            )
+        n_raw = entry["n"]
+        if not isinstance(n_raw, int) or isinstance(n_raw, bool) or n_raw <= 0:
+            raise PackError(
+                f"{pack_id}: calibration[{idx}].n must be a positive integer"
+            )
+        if not isinstance(entry["dataset"], str) or not entry["dataset"].strip():
+            raise PackError(f"{pack_id}: calibration[{idx}].dataset must be a non-empty string")
+        if not isinstance(entry["question"], str) or not entry["question"].strip():
+            raise PackError(f"{pack_id}: calibration[{idx}].question must be a non-empty string")
+        ts = entry["calibrated_at"]
+        # PyYAML auto-coerces unquoted ISO 8601 to datetime/date; accept either.
+        if isinstance(ts, (_dt.datetime, _dt.date)):
+            pass
+        elif isinstance(ts, str) and ts.strip():
+            pass
+        else:
+            raise PackError(
+                f"{pack_id}: calibration[{idx}].calibrated_at must be an ISO 8601 timestamp"
+            )
+        if jsd > CALIBRATION_JSD_WARN:
+            print(
+                f"warning: {pack_id}: calibration[{idx}] jsd={jsd:.3f} exceeds "
+                f"{CALIBRATION_JSD_WARN} (poor fit vs human baseline) — "
+                f"dataset={entry['dataset']} question={entry['question']}",
+                file=sys.stderr,
+            )
+        out.append(entry)
+    return out
+
+
 def _validate_and_build_entry(pack_dir: Path) -> dict[str, Any]:
     """Validate one pack directory and return its default.json entry."""
     # Import here so a missing dep yields a clear error path, not an import-time crash.
@@ -135,6 +212,8 @@ def _validate_and_build_entry(pack_dir: Path) -> dict[str, Any]:
     except PackValidationError as exc:
         raise PackError(f"{pack_id}: invalid persona pack — {exc}") from exc
 
+    calibrations = _validate_calibration(data.get("calibration"), pack_id)
+
     entry: dict[str, Any] = {
         "id": pack_id,
         "kind": "persona",
@@ -149,6 +228,8 @@ def _validate_and_build_entry(pack_dir: Path) -> dict[str, Any]:
     version = data.get("version")
     if version not in (None, ""):
         entry["version"] = str(version)
+    if calibrations:
+        entry["calibration_count"] = len(calibrations)
     return entry
 
 
